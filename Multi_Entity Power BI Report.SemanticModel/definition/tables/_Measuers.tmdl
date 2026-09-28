@@ -1,0 +1,127 @@
+table _Measuers
+	lineageTag: 149aab7d-cc99-4c8f-a1ef-41236c7ea3a9
+
+	measure 'MTD Actucal' =
+			
+			VAR DT = MAX('UT & US Data 2025-26'[Date])
+			
+			RETURN DT
+		formatString: General Date
+		isHidden
+		lineageTag: 2e211a08-1bda-442c-b029-d3a5bfcfe467
+
+		changedProperty = IsHidden
+
+	measure Actual = SUM('PnL BS & CFS Main'[Actual Final])
+		formatString: #,0.00
+		lineageTag: 8187f334-11e2-495a-bdbd-3c4e86612057
+
+	measure 'MTD Actual' =
+			
+			VAR DAT = MAX('UT & US Data 2025-26'[Date])
+			VAR RES = CALCULATE([Actual], 'PnL BS & CFS Main'[Date] = DAT )
+			RETURN RES
+		formatString: #,0.00
+		lineageTag: 81584350-816f-4650-8186-37dfbbe1c62b
+
+	measure Budget = SUM('PnL BS & CFS Main'[Budget Actual])
+		lineageTag: dc5513cb-8d30-4320-a3a5-61e9aeb838e2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Budget MTD' =
+			
+			VAR DAT = MAX('UT & US Data 2025-26'[Date])
+			VAR RES = CALCULATE([Budget], 'PnL BS & CFS Main'[Date] = DAT )
+			RETURN RES
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: e9edf212-980d-48cf-8dd0-2051a7dd08e2
+
+	measure 'MTD Variance' = ```
+			
+			VAR Result = [MTD Actual] - [Budget MTD]
+			RETURN VALUE(Result)
+			
+			```
+		lineageTag: 28a85fb5-f7c3-48d2-b334-49dd9e55150e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YTD Actual' = ```
+			
+			VAR MAXDATE = MAX('UT & US Data 2025-26'[Date])
+			VAR STDATE = 
+			SWITCH(
+			    TRUE(),
+			    YEAR(MAXDATE) = 2026, DATE(YEAR(MAXDATE),8,1),
+			    DATE(YEAR(MAXDATE)-1,8,1)
+			)
+			RETURN CALCULATE([Actual], DATESBETWEEN('PnL BS & CFS Main'[Date],STDATE,MAXDATE))
+			```
+		formatString: #,0.00
+		lineageTag: 6b24c8f3-6437-4d5f-8d23-27ffc2836984
+
+	measure 'YTD Budget' = ```
+			
+			VAR MAXDATE = MAX('UT & US Data 2025-26'[Date])
+			VAR STDATE = 
+			SWITCH(
+			    TRUE(),
+			    YEAR(MAXDATE) = 2026, DATE(YEAR(MAXDATE),8,1),
+			    DATE(YEAR(MAXDATE)-1,8,1)
+			)
+			RETURN CALCULATE([Budget], DATESBETWEEN('PnL BS & CFS Main'[Date],STDATE,MAXDATE))
+			```
+		lineageTag: 11f13d10-7b21-4105-a5fb-ee122767032f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YTD Variance' = [YTD Actual]-[YTD Budget]
+		lineageTag: 0a9eaa26-51e0-4899-8d46-ab0674d1f453
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Actual LY' = SUM('PnL BS & CFS Main'[Actual Final LY])
+		formatString: "Rs"#,0.###############;-"Rs"#,0.###############;"Rs"#,0.###############
+		lineageTag: 88a0008c-c8f6-48d8-b1e8-4b383f462678
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-PK"}
+
+	measure 'YTD Actual LY' = ```
+			
+			VAR MAXYEAR = YEAR(MAX('UT & US Data 2025-26'[Date])) - 1
+			RETURN
+			CALCULATE(
+			    [Actual LY],
+			    FILTER(
+			        'UT & US Data 2025-26',
+			        YEAR('UT & US Data 2025-26'[Date]) = MAXYEAR
+			            && MONTH('UT & US Data 2025-26'[Date]) IN {7, 8}
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 52b48560-2fe3-4c6e-b076-755f24a90f15
+
+	measure 'YTD Variance LY' = [YTD Actual]-[YTD Actual LY]
+		formatString: #,0.00
+		lineageTag: bbd24b97-cd5b-4004-b731-1d1168f9d9b6
+
+	measure Budget&Actual_Variance = [YTD Actual]-[Budget]
+		lineageTag: 7b5839f0-495d-4c7c-aa2a-606c08df6faf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _Measuers = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

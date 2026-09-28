@@ -1,0 +1,140 @@
+table 'UT P&L 2026'
+	isHidden
+	lineageTag: dab1c43b-1267-4c3e-83f7-336348b4665e
+
+	column 'GL Account'
+		dataType: string
+		isHidden
+		lineageTag: fb12d263-d5be-4d81-982a-d6433cdc7d49
+		summarizeBy: none
+		sourceColumn: GL Account
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GL Code'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b13ca5bd-5a46-4775-9d21-07121c85b30e
+		summarizeBy: count
+		sourceColumn: GL Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		isHidden
+		lineageTag: d3485bf4-5625-4445-adf4-c56ed7cc05cf
+		summarizeBy: none
+		sourceColumn: Month
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		isHidden
+		formatString: 0
+		lineageTag: cd7a95e7-cfc8-4d37-a92c-f3f66bfbc218
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		isHidden
+		lineageTag: c3d8d316-ca0f-4c78-82bc-632a911a63c1
+		summarizeBy: none
+		sourceColumn: Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		isHidden
+		lineageTag: c79603bc-a77c-4c38-a9d0-83fbc55a87bb
+		summarizeBy: none
+		sourceColumn: Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: aeac17aa-a180-4dca-877b-ed826286e6be
+		summarizeBy: sum
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'UT P&L 2026' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Power BI\Data 1 Financial\CSV\UT P&L 2026.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"_1", type text}, {"_2", type text}, {"July      NY", Int64.Type}, {"August    NY", Int64.Type}, {"Total", Int64.Type}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type", {{"", null}, {"_1", null}, {"_2", null}, {"July      NY", null}, {"August    NY", null}, {"Total", null}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Replaced Errors",{"Total"}),
+				    #"Filled Down" = Table.FillDown(#"Removed Columns",{"_1"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Filled Down",{{"_1", Text.Trim, type text}}),
+				    #"Filled Down1" = Table.FillDown(#"Trimmed Text",{"_1"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Filled Down1",{{"", "GL Code"}, {"_1", "Type"}, {"_2", "GL Account"}}),
+				    #"Sorted Rows" = Table.Sort(#"Renamed Columns",{{"Type", Order.Descending}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Sorted Rows",{"Type"}),
+				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Removed Columns1", {"GL Code", "GL Account"}, "Attribute", "Value"),
+				    #"Trimmed Text1" = Table.TransformColumns(#"Unpivoted Other Columns",{{"Attribute", Text.Trim, type text}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Trimmed Text1",{{"Attribute", "Month"}, {"Value", "Amount"}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Renamed Columns1", "Month", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Month.1", "Month.2"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Month.1", type text}, {"Month.2", type text}}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Changed Type1",{"Month.2"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns2", "Type", each "PROFIT & LOSS"),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Country", each "AUS"),
+				    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "Year", each "2026"),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Added Custom2",{{"Month.1", "Month"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns2",{"GL Code", "GL Account", "Type", "Month", "Year", "Amount", "Country"}),
+				    #"Trimmed Text2" = Table.TransformColumns(#"Reordered Columns",{{"Year", Text.Trim, type text}}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Trimmed Text2",{{"Year", Int64.Type}, {"Amount", Currency.Type}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type2",-794494,794494,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",-78863,78863,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1",-3515,3515,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2",-6600,6600,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3",-94864,94864,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4",-11651,11651,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5",-96860,96860,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6",-2650,2650,Replacer.ReplaceValue,{"Amount"}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Replaced Value7",{{"Amount", Currency.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type3", each ([Month] = "August")),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Filtered Rows",-388888,388888,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8",-445,445,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9",-11476,11476,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10",-52375,52375,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11",-9700,9700,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12",-96314,96314,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13",-12173,12173,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14",-323678,323678,Replacer.ReplaceValue,{"Amount"}),
+				    #"Replaced Value16" = Table.ReplaceValue(#"Replaced Value15",-13111,13111,Replacer.ReplaceValue,{"Amount"})
+				in
+				    #"Replaced Value16"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

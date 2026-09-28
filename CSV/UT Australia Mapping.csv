@@ -1,0 +1,364 @@
+,,,,,,,,,,,,,PLESE USE THIS FOR DECK ( P&L High Level only),For Budget vs Actual Tab,Head Office Mapping,Head Office Mapping
+TYPE,Code,Description,Column,Level,Style,Addto-1,Dr/Cr,Post,Summary,Formula, old mapping SWC ,old mapping,OMNITRONICS DECK MAPPING for P&L,OMNITRONICS ,NS Acc #,NS Acc name
+BALANCE SHEET,1100,Cash on Hand - Unit Capital,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash on hand,0,Cash on hand,1-012-01-2-001,OM012 - Cash at bank clearing
+BALANCE SHEET,1101,Operating Cheque Account,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,1-012-01-2-002,OM012 - WBC AUD Business one
+BALANCE SHEET,1102,Debit cards bank account,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,1-012-01-2-003,OM012 - WBC AUD Business one plus
+BALANCE SHEET,1103,CRB Account,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,1-012-01-2-004,OM012 - WBC AUD Business cash reserve
+BALANCE SHEET,1104,Credit Card - JF,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,2-012-02-1-001,OM012 - WBC credit card (JF)
+BALANCE SHEET,1105,USD - AFEX Account,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,1-012-01-2-006,OM012 - AFEX USD
+BALANCE SHEET,1106,Airwallex AUD,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,1-012-01-2-007,OM012 - AWX AUD
+BALANCE SHEET,1107,Airwallex USD,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,1-012-01-2-008,OM012 - AWX USD
+BALANCE SHEET,1108,Westpac USD,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Cash at bank,0,Cash at bank,1-012-01-2-005,OM012 - WBC USD
+BALANCE SHEET,1110,Receipting Account,1,1,0,1199,Dr,Yes,Never,Unrestricted Cash on Hand & at Banks," 2,110,020 ",Trade receivables,#N/A,Trade receivables,#N/A,#N/A
+BALANCE SHEET,1200,Trade Debtors,1,2,0,1590,Dr,Yes,Never,Account Receivables - Non-Retention," 2,112,020 ",Trade receivables,0,Trade receivables,1-000-02-1-001,Accounts receivable
+BALANCE SHEET,1201,Sundry Debtors,1,2,0,1590,Dr,Yes,Never,Account Receivables - Non-Retention," 2,112,020 ",Trade receivables,0,Trade receivables,1-000-02-1-001,Accounts receivable
+BALANCE SHEET,1202,ECL Trade Receiables,1,2,0,1591,Dr,Yes,Never,Account Receivables - Non-Retention," 2,112,020 ",Allowance for ECL,0,Allowance for ECL,1-000-02-2-001,Bad debt provision on accounts receivable
+BALANCE SHEET,1300,Loan-Omnitronics Inc (USA),1,2,0,1590,Dr,Yes,Never,Loan to Associated Companies & JVs," 2,220,010 ",Amount Due to Related Companies,0,Amount Due to Related Companies,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,1301,Omni Inc Contra Account,1,2,0,1590,Dr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Amount Due to Related Companies,#N/A,Amount Due to Related Companies,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,1302,Loan-Macroview Business,1,2,0,1590,Dr,Yes,Never,Amount Due from Related Companies," 2,120,090 ",Intercompany payable,0,Intercompany payable,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,1303,  Loan-Software Combined Bidco Pty Ltd,1,2,0,1590,Dr,Yes,Never,Amount Due from Related Companies," 2,120,090 ",Intercompany payable,0,Intercompany payable,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,1400,Stock on Hand - Stores,1,1,0,1459,Dr,Yes,Never,Finished Goods," 2,113,030 ",Finished Goods,0,Finished Goods,1-000-04-3-001,Finished goods - Production
+BALANCE SHEET,1411,Stock on Hand - Engineering,1,1,0,1459,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,0,Other Inventories,1-000-04-3-001,Finished goods - Production
+BALANCE SHEET,1418,Stock on Hand - Third Party Products,1,1,0,1459,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,0,Other Inventories,1-000-04-3-004,Finished goods - 3rdPTY product
+BALANCE SHEET,1420,Stock on Hand - Demo/Loan Stock,1,1,0,1459,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,0,Other Inventories,1-000-04-3-001,Finished goods - Production
+BALANCE SHEET,1422,Stock on Hand - Refurbished Stock,1,1,0,1459,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,0,Other Inventories,1-000-04-3-001,Finished goods - Production
+BALANCE SHEET,1425,Stock on Hand - Service,1,1,0,1459,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,0,Other Inventories,1-000-04-3-001,Finished goods - Production
+BALANCE SHEET,1430,Stock on Hand - Manufacturing,1,1,0,1459,Dr,Yes,Never,Work in Progress," 2,113,020 ",Work in Progress,0,Work in Progress,1-000-04-3-001,Finished goods - Production
+BALANCE SHEET,1432,Stock on Hand - RMA,1,1,0,1459,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,0,Other Inventories,1-000-04-3-002,Finished goods - Production RMA
+BALANCE SHEET,1440,Stock on Hand - SUB Manufacturing,1,1,0,1459,Dr,Yes,Never,Work in Progress," 2,113,020 ",Work in Progress,0,Work in Progress,1-000-04-3-001,Finished goods - Production
+BALANCE SHEET,1488,Market Value Adjustment to Stock,1,2,0,1590,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,#N/A,Other Inventories,1-000-04-5-003,Provision for write-down on finished goods
+BALANCE SHEET,1490,Engineering Services WIP,1,1,0,1590,Dr,Yes,Never,Work in Progress," 2,113,020 ",Work in Progress,0,Work in Progress,1-000-04-2-006,Work-in-progress - Services
+BALANCE SHEET,1495,R&D Services WIP,1,1,0,1498,Dr,Yes,Never,Work in Progress," 2,113,020 ",Work in Progress,#N/A,Work in Progress,1-000-04-2-006,Work-in-progress - Services
+BALANCE SHEET,1499,Provision for inventory write down,1,1,0,1459,Dr,Yes,Never,Other Inventories," 2,113,050 ",Other Inventories,0,Other Inventories,1-000-04-5-003,Provision for write-down on finished goods
+BALANCE SHEET,1500,Prepayments,1,2,0,1590,Dr,Yes,Never,Prepayments," 2,120,050 ",Prepayments,0,Prepayments,1-000-06-2-998,Other prepayment
+BALANCE SHEET,1550,Deposits Paid,1,2,0,1590,Dr,Yes,Never,Security Deposit," 2,120,060 ",Security Deposit,0,Security Deposit,1-000-06-1-001,Security deposit
+BALANCE SHEET,1555,TBCT Omni Inc,1,2,0,1590,Dr,Yes,Never,Account Receivables - Non-Retention," 2,112,020 ",Trade receivables,0,Trade receivables,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,1520,Advance,1,2,0,1590,Dr,Yes,Never,Account Receivables - Non-Retention," 2,112,020 ",Trade receivables,0,Trade receivables,1-000-10-1-005,Other short-term loan receivable from employee
+BALANCE SHEET,1560,Security Dpst/Keys (Qld),1,2,0,1590,Dr,Yes,Never,Security Deposit," 2,120,060 ",Security Deposit QLD,0,Security Deposit QLD,1-000-06-1-001,Security deposit
+BALANCE SHEET,1702,Fixed Assets Clearing,,,,,,,,Other PPE," 2,210,020 ",Office equipment,0,Office equipment,1-000-51-9-999,Fixed asset clearing
+BALANCE SHEET,1850,Deferred Tax Asset,,,,,,,,LT Deferred Tax Assets," 2,230,010 ",Deferred Tax Assets (Non-Current),0,Deferred Tax Assets (Non-Current),1-000-58-1-001,Non-current DTA
+BALANCE SHEET,1710,Property Plant & Equipment,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Office equipment,0,Office equipment,1-000-51-1-001,Office equipment cost
+BALANCE SHEET,1711,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Office equipment - Accumulated Depreciation,0,Office equipment - Accumulated Depreciation,1-000-51-1-002,Office equipment accum depreciation
+BALANCE SHEET,1715,Computer Equipment,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Computer equipment,0,Computer equipment,1-000-51-2-001,Computer equipment cost
+BALANCE SHEET,1716,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Computer equipment - Accumulated Depreciation,0,Computer equipment - Accumulated Depreciation,1-000-51-2-002,Computer equipment accum depreciation
+BALANCE SHEET,1720,Leasehold Improvements,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Leasehold Improvements,0,Leasehold Improvements,1-000-51-3-001,Leasehold improvement cost
+BALANCE SHEET,1721,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Leasehold Improvements - Accumulated Depreciation,0,Leasehold Improvements - Accumulated Depreciation,1-000-51-3-002,Leasehold improvement accum depreciation
+BALANCE SHEET,1722,Harrogate Offices,1,2,0,1891,Dr,Yes,Never,Other PPE," 2,210,020 ",#N/A,0,#N/A,1-000-52-1-001,ROU Building cost
+BALANCE SHEET,1730,Low Value Pool,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Office equipment,0,Office equipment,1-000-51-1-001,Office equipment cost
+BALANCE SHEET,1731,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",#N/A,#N/A,#N/A,1-000-51-1-002,Office equipment accum depreciation
+BALANCE SHEET,1740,SBE General Pool,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Office equipment,#N/A,Office equipment,1-000-51-1-001,Office equipment cost
+BALANCE SHEET,1750,Computer Software,1,2,0,1890,Dr,Yes,Never,IA - Others," 2,250,030 ",Software,0,Software,1-000-54-1-001,Software cost
+BALANCE SHEET,1751,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,IA - Others," 2,250,030 ",Software - Accumulated Amortisation,0,Software - Accumulated Amortisation,1-000-54-1-002,Software accum amortisation
+BALANCE SHEET,1755,Motor vehicles - cost,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Motor Vehicles,0,Motor Vehicles,1-000-51-5-001,Motor vehicle cost
+BALANCE SHEET,1756,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Motor Vehicles - Accumulated Depreciation,0,Motor Vehicles - Accumulated Depreciation,1-000-51-5-002,Motor vehicle accum depreciation
+BALANCE SHEET,1760,Intangibles,1,2,0,1890,Dr,Yes,Never,IA - Trademark," 2,250,010 ",Trademark and Patents,0,Trademark and Patents,1-000-54-2-001,Trademark and patent cost
+BALANCE SHEET,1770,Loan Equipment,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Office equipment,0,Office equipment,1-000-51-1-001,Office equipment cost
+BALANCE SHEET,1771,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Office equipment - Accumulated Depreciation,0,Office equipment - Accumulated Depreciation,1-000-51-1-002,Office equipment accum depreciation
+BALANCE SHEET,1705,Right-of-use assets,1,2,0,1890,Dr,Yes,Never,ROU Assets," 2,210,000 ",ROU - Buildings,0,ROU - Buildings,1-000-52-1-001,ROU Building cost
+BALANCE SHEET,1706,Less Accum Depn ROU Assets,1,2,0,1890,Dr,Yes,Never,ROU Assets," 2,210,000 ",ROU - Buildings - Accumulated Depreciation,0,ROU - Buildings - Accumulated Depreciation,1-000-52-1-002,ROU Building accum depreciation
+BALANCE SHEET,1780,Software PPA cost,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Software PPA cost,#N/A,Software PPA cost,1-000-54-1-004,Software PPA cost
+BALANCE SHEET,1781,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Software PPA Accumulated Depreciation,#N/A,Software PPA Accumulated Depreciation,1-000-54-1-005,Software PPA  accum amortisation
+BALANCE SHEET,1782,Customer relationship PPA cost,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Customer relationship PPA cost,#N/A,Customer relationship PPA cost,1-000-54-3-004,Customer relationship PPA cost
+BALANCE SHEET,1783,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Customer relationship Accumulated Depreciation,#N/A,Customer relationship Accumulated Depreciation,1-000-54-3-005,Customer relationship PPA accum amortisation
+BALANCE SHEET,1784,Intellectual property PPA cost,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Intellectual property PPA cost,#N/A,Intellectual property PPA cost,1-000-54-4-004,Intellectual property PPA cost
+BALANCE SHEET,1785,Less Accumulated Depreciation,1,2,0,1890,Dr,Yes,Never,Other PPE," 2,210,020 ",Customer relationship Accumulated Depreciation,#N/A,Customer relationship Accumulated Depreciation,1-000-54-4-005 ,Intellectual property PPA accum amortisation
+BALANCE SHEET,2100,Trade Creditors,1,2,0,2790,Cr,Yes,Never,Trade Payable (Excl Trade Financing)," 2,440,000 ",Trade Payables,0,Trade Payables,2-000-01-1-001,Accounts payable
+BALANCE SHEET,2150,Accruals,1,2,0,2790,Cr,Yes,Never,Accrued Expenses," 2,410,103 ",Accrued expenses,0,Accrued expenses,2-000-03-1-001,Trade accrued expense
+BALANCE SHEET,2160,EMC Accruals,1,2,0,2790,Cr,Yes,Never,Accrued Expenses," 2,410,103 ",Accrued expenses,0,Accrued expenses,2-000-03-1-998,Other accrued expense
+BALANCE SHEET,2190,Tax Payable,1,2,0,2790,Cr,Yes,Never,Tax Payables," 2,410,020 ",Tax Payables,0,Tax Payables,2-000-09-1-001,Income tax payable - AU
+BALANCE SHEET,2191,Income Tax Deferred,1,2,0,2790,Cr,Yes,Never,Tax Payables," 2,410,020 ",Tax Payables,#N/A,Tax Payables,#N/A,#N/A
+BALANCE SHEET,2200,Insurance Funding,1,2,0,2790,Cr,Yes,Never,ST Loan," 2,420,050 ",Interest bearing loans and borrowings (Current),0,Interest bearing loans and borrowings (Current),2-000-12-1-001,Short-term interest-bearing borrowing facility
+BALANCE SHEET,2300,Goods Received Accrual,1,2,0,2790,Cr,Yes,Never,Accrued Expenses," 2,410,103 ",Accrued expenses,0,Accrued expenses,2-000-03-1-002,GR/NI accrued expense
+BALANCE SHEET,2400,Projects Income Received in Advance,1,1,0,2420,Cr,Yes,Never,Customers' Deposits," 2,410,105 ",Customers' Deposits,0,Customers' Deposits,2-000-05-1-001,Customer deposit
+BALANCE SHEET,2425,Provision for Return,1,1,0,2790,Cr,Yes,Never,Customers' Deposits," 2,410,105 ",Customers' Deposits,#N/A,Customers' Deposits,2-000-05-1-001,Customer deposit
+BALANCE SHEET,2410,SMA Income Received in Advance,1,1,0,2420,Cr,Yes,Never,Deferred Income," 2,410,010 ",Deferred Income,0,Deferred Income,2-000-04-1-003,Maintenance service deferred revenue
+BALANCE SHEET,2480,Lease Liabilities - current,1,1,0,2420,Cr,Yes,Never,ST Lease Liabilities," 2,420,070 ",Leases (Current),0,Leases (Current),2-000-13-1-001,Current ROU lease liability
+BALANCE SHEET,2500,System Accruals,1,2,0,2790,Cr,Yes,Never,Accrued Expenses," 2,410,103 ",Accrued expenses,#N/A,Accrued expenses,2-000-03-1-998,Other accrued expense
+BALANCE SHEET,2600,GST Paid,1,2,0,2790,Cr,Yes,Never,Other Payables," 2,410,102 ",Value-added tax payable,0,Value-added tax payable,2-000-06-1-001,VAT payable - AU
+BALANCE SHEET,2610,GST Collected,1,2,0,2790,Cr,Yes,Never,Other Payables," 2,410,102 ",Value-added tax payable,0,Value-added tax payable,2-000-06-1-001,VAT payable - AU
+BALANCE SHEET,2630,GST Accrued,1,2,0,2790,Cr,Yes,Never,Other Payables," 2,410,102 ",Value-added tax payable,0,Value-added tax payable,2-000-06-1-001,VAT payable - AU
+BALANCE SHEET,2700,Payroll Accruals,1,1,0,2790,Cr,Yes,Never,Other Payables," 2,410,102 ",Wages payables,0,Wages payables,2-000-07-1-001,Salary payable
+BALANCE SHEET,2710,Superannuation Payable,1,1,0,2790,Cr,Yes,Never,Other Payables," 2,410,102 ",Wages payables,0,Wages payables,2-000-07-1-005,Superannuation payable
+BALANCE SHEET,2720,Accrued Annual Leave,1,1,0,2790,Cr,Yes,Never,Provisions," 2,410,104 ",Annual leave (Current),0,Annual leave (Current),2-000-08-1-001,Current annual leave provision
+BALANCE SHEET,2725,Accrued LSL,1,1,0,2790,Cr,Yes,Never,Provisions," 2,410,104 ",Annual leave (Current),0,Annual leave (Current),2-000-08-1-002,Current long service leave provision
+BALANCE SHEET,2730,FBT,1,1,0,2790,Cr,Yes,Never,Accrued Expenses," 2,410,103 ",Other payables,#N/A,Other payables,2-000-06-2-003,FBT payable
+BALANCE SHEET,2740,PAYG,1,1,0,2790,Cr,Yes,Never,Other Payables," 2,410,102 ",Wages payables,0,Wages payables,2-000-07-1-004,PAYG withholding payable
+BALANCE SHEET,2750,Payroll Tax Payable,1,1,0,2790,Cr,Yes,Never,Other Payables," 2,410,102 ",Other payables,0,Other payables,2-000-06-2-001,Payroll tax payable
+BALANCE SHEET,2726,Accrued LSL Non Current,1,1,0,2790,Cr,Yes,Never,Other Long Term Liabilities," 2,510,030 ",Long service leave (Non-current),0,Long service leave (Non-current),2-000-51-1-002,Non-current long service leave provision
+BALANCE SHEET,2760,ST Loan - Software Combined,1,2,0,2790,Cr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Intercompany payable,0,Intercompany payable,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,2780,Suspense,1,2,0,2790,Cr,Yes,Never,Accrued Expenses," 2,410,103 ",#N/A,#N/A,#N/A,2-000-06-9-999,Suspense payable
+BALANCE SHEET,2805,Lease Liabilities,1,2,0,2790,Cr,Yes,Never,LT Lease Liabilities," 2,520,050 ",Leases (Non-Current),0,Leases (Non-Current),2-000-55-1-001,Non-current ROU lease liability
+BALANCE SHEET,2806,ECL Provision,1,2,0,2790,Cr,Yes,Never,Account Receivables - Non-Retention," 2,112,020 ",#N/A,#N/A,#N/A,1-000-02-2-001,Bad debt provision on accounts receivable
+BALANCE SHEET,2807,Make good provision,1,2,0,2790,Cr,Yes,Never,LT Lease Liabilities," 2,520,050 ",Make good provision (Non-Current),0,Make good provision (Non-Current),2-000-51-2-001,Non-current make good provision
+BALANCE SHEET,2810,Nicolson Family Trust,1,2,0,2990,Cr,Yes,Never,Vendor Earn-Out (Confirmed to be Paid)," 2,520,001 ",#N/A,#N/A,#N/A,2-000-54-9-002,Other long-term borrowing from shareholder
+BALANCE SHEET,2820,Lowe Family Trust,1,2,0,2990,Cr,Yes,Never,Vendor Earn-Out (Confirmed to be Paid)," 2,520,001 ",#N/A,0,#N/A,2-000-54-9-002,Other long-term borrowing from shareholder
+BALANCE SHEET,2830,J & E Florenca Family Trust,1,2,0,2990,Cr,Yes,Never,Vendor Earn-Out (Confirmed to be Paid)," 2,520,001 ",#N/A,0,#N/A,2-000-54-9-002,Other long-term borrowing from shareholder
+BALANCE SHEET,2840,DASH Enterprises Family Trust,1,2,0,2990,Cr,Yes,Never,Vendor Earn-Out (Confirmed to be Paid)," 2,520,001 ",#N/A,0,#N/A,2-000-54-9-002,Other long-term borrowing from shareholder
+BALANCE SHEET,2890,Director's Loans,1,2,0,2990,Cr,Yes,Never,Vendor Earn-Out (Confirmed to be Paid)," 2,520,001 ",#N/A,#N/A,#N/A,2-000-54-9-002,Other long-term borrowing from shareholder
+BALANCE SHEET,2900,Omni Devlmts - Post 16/12/09,1,2,0,2990,Cr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Amount Due to Related Companies,0,Amount Due to Related Companies,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,2905,Omni Devlmts - Pre 16/12/09,1,2,0,2990,Cr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Amount Due to Related Companies,0,Amount Due to Related Companies,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,2910,"Shares in Omnitronics, Inc",1,2,0,2990,Cr,Yes,Never,Ordinary Issued Share Capital," 2,610,010 ",Amount Due to Related Companies,#N/A,Amount Due to Related Companies,1-000-56-1-001,Investment in subsidiary
+BALANCE SHEET,2920,Loan - Omnitronics Developments 2015,1,2,0,2990,Cr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Amount Due to Related Companies,0,Amount Due to Related Companies,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,2930,Related Party Payable Bidco,1,2,0,2990,Cr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Intercompany payable,0,Intercompany payable,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,2940,Tax Funding Account,,2,0,2990,Cr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Intercompany payable,#N/A,Intercompany payable,1-000-07-1-888,Intercompany tax receivable
+BALANCE SHEET,2950,Omnitronics Developments Pty Ltd,1,2,0,2990,Cr,Yes,Never,Amount Due to Related Companies," 2,410,090 ",Amount Due to Related Companies,0,Amount Due to Related Companies,2-000-06-9-888,Intercompany payable clearing
+BALANCE SHEET,3010,Shareholders equity,1,2,0,3090,Cr,Yes,Never,Ordinary Issued Share Capital," 2,610,010 ",Share Capital,0,Share Capital,3-000-01-1-888,Pre-acquisition ordinary share at par value
+,3015,Dividend Declaration,,,,,,,,Retained Earnings," 2,610,000 ",Retained Earnings,#N/A,Retained Earnings,3-000-02-1-001,Retained earnings
+BALANCE SHEET,3013,Pre-acquisition asset revaluation reserve,1,2,0,3090,Cr,Yes,Never,Pre-acquisition asset revaluation reserve," 2,610,011 ",Share Capital,#N/A,Share Capital,3-000-04-1-888,Pre-acquisition asset revaluation reserve
+,3020,,,,,,,,,Retained Earnings," 2,610,000 ",Retained Earnings,0,Retained Earnings,3-000-02-1-001,Retained earnings
+,3030,Retained Earnings (prior year),,,,,,,,Retained Earnings," 2,610,000 ",Retained Earnings,0,Retained Earnings,3-000-02-1-001,Retained earnings
+,,,,,,,,,,,,,#N/A,,#N/A,#N/A
+PROFIT & LOSS,4000,Sales,1,1,0,4900,Cr,Yes,Never,Hardware sales," 1,001,003 ",Hardware sales,Revenue Australia,Hardware sales,4-012-03-1-001,OM012 - Hardware revenue - Production
+PROFIT & LOSS,4100,Sales - Engineering Services,1,1,0,4900,Cr,Yes,Never,Engineering services," 1,001,006 ",Engineering services,Revenue Australia,Engineering services,4-012-02-3-001,OM012 - Engineering project & system service revenue
+PROFIT & LOSS,4110,Sales-Development,1,1,0,4900,Cr,Yes,Never,Engineering services," 1,001,006 ",Engineering services,#N/A,Engineering services,#N/A,#N/A
+PROFIT & LOSS,4010,Turnkey Components Onsold,1,1,0,4900,Cr,Yes,Never,Hardware sales," 1,001,003 ",Hardware sales-COMPONENTS,Revenue Australia,Hardware sales-COMPONENTS,4-012-03-1-001,OM012 - Hardware revenue - Production
+PROFIT & LOSS,4018,Sales - Third Party Products,1,1,0,4900,Cr,Yes,Never,Third Party Sales," 1,001,003 ",Third Party Sales,Revenue Australia,Third Party Sales,4-012-03-4-001,OM012 - Hardware revenue - 3rdPTY product
+PROFIT & LOSS,4200,Sales - Demo,1,1,0,4900,Cr,Yes,Never,Hardware sales," 1,001,003 ",Hardware sales-DEMO,Revenue Australia,Hardware sales-DEMO,4-012-03-1-001,OM012 - Hardware revenue - Production
+PROFIT & LOSS,4300,Sales - RMA,1,1,0,4900,Cr,Yes,Never,Maintenance services," 1,001,005 ",Maintenance services,Revenue Australia,Maintenance services,4-012-03-2-001,OM012 - Hardware revenue - Production RMA
+PROFIT & LOSS,4400,Sales - Refurbished Stock,1,1,0,4900,Cr,Yes,Never,Hardware sales," 1,001,003 ",Hardware sales,Revenue Australia,Hardware sales,4-012-03-1-001,OM012 - Hardware revenue - Production
+PROFIT & LOSS,4500,Sales - SMAs,1,1,0,4900,Cr,Yes,Never,Maintenance services," 1,001,005 ",Maintenance services,Revenue Australia,Maintenance services,4-012-05-1-001,OM012 - SMA revenue
+PROFIT & LOSS,4550,Subscription Revenue,1,1,0,4900,Cr,Yes,Never,Maintenance services," 1,001,005 ",Maintenance services,Revenue Australia,Maintenance services,4-012-04-1-001,OM012 - Console subscription revenue
+PROFIT & LOSS,4700,Project Sales - Services,1,1,0,4900,Cr,Yes,Never,Engineering services," 1,001,006 ",Engineering services,#N/A,Engineering services,4-012-02-3-001,OM012 - Engineering project & system service revenue
+PROFIT & LOSS,4705,Project Sales - Hardware,1,1,0,4900,Cr,Yes,Never,Hardware sales," 1,001,003 ",Hardware sales,#N/A,Hardware sales,#N/A,#N/A
+PROFIT & LOSS,4760,Software Licences,1,1,0,4900,Cr,Yes,Never,Software & License fees," 1,001,004 ",Software & License fees,Revenue Australia,Software & License fees,4-012-04-3-001,OM012 - Omnicore perpetual license revenue
+PROFIT & LOSS,4770,Other Licences,1,1,0,4900,Cr,Yes,Never,Software & License fees," 1,001,004 ",Software & License fees,Revenue Australia,Software & License fees,4-012-04-3-998,OM012 - Other perpetual license revenue
+PROFIT & LOSS,4600,Sales - Seminars & Onsite Training,1,1,0,4900,Cr,Yes,Never,Engineering services," 1,001,006 ",Engineering services,Revenue Australia,Engineering services,4-012-02-3-001,OM012 - Engineering project & system service revenue
+PROFIT & LOSS,4910,Interest Received,1,1,0,4970,Cr,Yes,Never,Interest Income," 1,430,001 ",Interest Income - External,Others,Interest Income - External,9-000-07-1-001,Interest Income - cash at bank
+PROFIT & LOSS,4950,Other Income,1,1,0,4970,Cr,Yes,Never,Other Revenue," 1,001,007 ",Other Revenue,Revenue Australia,Other Revenue,8-000-09-1-998,Other miscellaneous income
+PROFIT & LOSS,4960,R&D Reimbursements,1,1,0,4970,Cr,Yes,Never,Others," 1,300,150 ",Others,Staff Cost,Others,4-000-06-1-888,Intercompany recharge income account
+PROFIT & LOSS,5000,Opening Stock - Stores,1,1,0,5025,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5010,Purchases - Stores,1,1,0,5025,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5018,Opening Stock - Third Party Products,1,1,0,5025,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Third Party Products,5-000-03-2-001,Hardware COGS - 3rdPTY product purchase
+PROFIT & LOSS,5019,Purchases - Third Party Products,1,1,0,5025,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Third Party Products,5-000-03-2-001,Hardware COGS - 3rdPTY product purchase
+PROFIT & LOSS,5022,Closing Stock - Third Party Products,1,1,0,5025,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Third Party Products,5-000-03-2-001,Hardware COGS - 3rdPTY product purchase
+PROFIT & LOSS,5020,Closing Stock - Stores,1,1,0,5025,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5028,Opening Stock - REF,1,1,0,5035,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5030,Refurbished Stock purchases,1,1,0,5035,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5032,Closing Stock - REF,1,1,0,5035,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5048,Opening Stock - SER,1,1,0,5055,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5050,Service purchases,1,1,0,5055,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5052,Closing Stock - SER,1,1,0,5055,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5068,Opening Stock - ENG,1,1,0,5075,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5070,Purchases - ENG,1,1,0,5075,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5072,Closing Stock - ENG,1,1,0,5075,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5100,Opening Stock - SUB Manufacturing,1,1,0,5125,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5110,Purchases - Subcontractor Manufacturing,1,1,0,5125,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5120,Closing Stock - SUB Manufacturing,1,1,0,5125,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5200,Opening Stock - Demo,1,1,0,5225,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5210,Purchases - Demo,1,1,0,5225,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5220,Closing Stock - Demo,1,1,0,5225,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5250,Opening Stock - RMA,1,1,0,5275,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5259,Internal Labour - OLD,1,1,0,5400,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,#N/A,#N/A
+PROFIT & LOSS,5260,Purchases - RMA,1,1,0,5275,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-03-3-001,Hardware COGS - Production RMA purchase
+PROFIT & LOSS,5265,Freight & Customs on Sales,1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-003,Hardware COGS - Production freight
+PROFIT & LOSS,5266,Freight Recovery,1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-003,Hardware COGS - Production freight
+PROFIT & LOSS,5267,Freight to US (INC),1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-003,Hardware COGS - Production freight
+PROFIT & LOSS,5460,Warranty & Replacements,1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,003 ",COGS - Other Costs,COGS,Factory Overheads,5-000-06-3-001,Other COGS
+PROFIT & LOSS,5270,Closing Stock - RMA,1,1,0,5275,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-03-3-001,Hardware COGS - Production RMA purchase
+PROFIT & LOSS,5300,Opening Stock - FCT,1,1,0,5325,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5310,Purchases - Manufacturing,1,1,0,5325,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5320,Closing Stock - FCT,1,1,0,5325,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+PROFIT & LOSS,5410,Subcontractors - OLD,1,1,0,5400,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-03-1-998,Hardware COGS - Production other cost
+PROFIT & LOSS,5424,Consumables - Engineering,1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,003 ",COGS - Other Costs,COGS,Factory Overheads,5-000-06-3-001,Other COGS
+PROFIT & LOSS,5425,EMC Testing,1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,003 ",COGS - Other Costs,COGS,Factory Overheads,5-000-06-0-000,Other COGS
+PROFIT & LOSS,5450,Consumables - Production,1,1,0,5400,Dr,Yes,Never,COGS - Factory Overheads," 1,013,002 ",COGS - Factory Overheads,COGS,Factory Overheads,5-000-06-3-001,Other COGS
+PROFIT & LOSS,5492,Equipment for Demo/Loan,1,1,0,5400,Dr,Yes,Never,COGS - Factory Overheads," 1,013,002 ",COGS - Factory Overheads,COGS,Factory Overheads,5-000-06-0-000,Other COGS
+PROFIT & LOSS,5455,Product Testing & Upgrades,1,1,0,5400,Dr,yes,,COGS - Factory Overheads," 1,013,002 ",COGS - Factory Overheads,COGS,Factory Overheads,5-000-06-0-000,Other COGS
+PROFIT & LOSS,5470,Stock Variances,1,1,0,5400,Dr,Yes,Never,COGS - Factory Overheads," 1,013,002 ",COGS - Factory Overheads,COGS,Factory Overheads,5-000-03-1-004,Hardware COGS - Production inventory write-down
+PROFIT & LOSS,5475,Stock Disposal,1,1,0,5400,Dr,Yes,Never,COGS - Factory Overheads," 1,013,002 ",COGS - Factory Overheads,COGS,Factory Overheads,5-000-03-1-004,Hardware COGS - Production inventory write-down
+PROFIT & LOSS,5480,Manufacturing Variances,1,1,0,5400,Dr,Yes,Never,COGS - Factory Overheads," 1,013,002 ",COGS - Factory Overheads,COGS,Factory Overheads,5-000-03-1-004,Hardware COGS - Production inventory write-down
+PROFIT & LOSS,5490,R&D Innovation & Upgrades,1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,003 ",COGS - Other Costs,COGS,Factory Overheads,5-000-06-0-000,Other COGS
+PROFIT & LOSS,5495,Client Training - Projects,1,1,0,5400,Dr,Yes,Never,COGS - Other Costs," 1,013,003 ",COGS - Other Costs,COGS,Factory Overheads,5-000-06-0-000,Other COGS
+PROFIT & LOSS,5551,Production Labour Recovery,1,2,0,5930,Dr,Yes,Never,COGS - Factory Overheads," 1,013,002 ",COGS - Factory Overheads,COGS,Factory Overheads,5-000-06-3-001,Other COGS
+PROFIT & LOSS,5810,Opening WIP - Projects,1,1,0,5818,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Hardware,5-000-02-2-001,Consulting and support COGS employee gross wage
+PROFIT & LOSS,5811,Project Engineering Services,1,1,0,5818,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Engineering Services,5-000-02-2-001,Consulting and support COGS employee gross wage
+PROFIT & LOSS,5812,Support & Maintenance Services,1,1,0,5818,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-05-9-001,Other maintenance service COGS
+PROFIT & LOSS,5813,Subcontractors - Engineering,1,1,0,5818,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-004,Consulting and support COGS contractor fee
+PROFIT & LOSS,5814,Client Development Services,1,1,0,5818,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-001,Consulting and support COGS employee gross wage
+PROFIT & LOSS,5816,Project Costs,1,1,0,5818,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,#N/A,#N/A
+PROFIT & LOSS,5817,Closing WIP -Projects,1,1,0,5818,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-001,Consulting and support COGS employee gross wage
+PROFIT & LOSS,5840,Opening WIP - R&D,1,1,0,5848,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-001,Consulting and support COGS employee gross wage
+PROFIT & LOSS,5841,Internal Labour - R&D,1,1,0,5848,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-001,Consulting and support COGS employee gross wage
+PROFIT & LOSS,5842,Subcontractors - R&D,1,1,0,5848,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-004,Consulting and support COGS contractor fee
+PROFIT & LOSS,5844,Purchases & Overheads - R&D,1,1,0,5848,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-004,Consulting and support COGS contractor fee
+PROFIT & LOSS,5845,Closing WIP -R&D,1,1,0,5848,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Maintenance Services,5-000-02-2-004,Consulting and support COGS contractor fee
+PROFIT & LOSS,5850,Opening WIP - RMA,1,1,0,5858,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Engineering Services,#N/A,#N/A
+PROFIT & LOSS,5851,Internal Labour - RMA,1,1,0,5858,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Engineering Services,#N/A,#N/A
+PROFIT & LOSS,5852,Subcontractors - RMA,1,1,0,5858,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Engineering Services,5-000-03-1-998,Hardware COGS - Production other cost
+PROFIT & LOSS,5853,Project Materials - RMA,1,1,0,5858,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Engineering Services,#N/A,#N/A
+PROFIT & LOSS,5854,Purchases & Overheads - RMA,1,1,0,5858,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Engineering Services,#N/A,#N/A
+PROFIT & LOSS,5855,Closing WIP -RMA,1,1,0,5858,Dr,Yes,Never,COGS - Direct Costs," 1,013,001 ",COGS - Direct Costs,COGS,COGS-Engineering Services,#N/A,#N/A
+PROFIT & LOSS,6010,Accounting Fees,1,2,0,6380,Dr,Yes,Never,Professional Services," 1,201,080 ",Accounting expense,Other opex,Accounting expense,6-000-05-1-001,Accounting fee expense
+PROFIT & LOSS,6011,Audit Fees,1,2,0,6380,Dr,Yes,Never,Professional Services," 1,201,080 ",Accounting expense,Other opex,Accounting expense,6-000-05-1-002,Audit fee - financial reporting expense
+PROFIT & LOSS,6020,Bad Debts Written Off,1,2,0,6990,Dr,Yes,Never,General Administrative," 1,201,100 ",ECL Expense,Other opex,ECL Expense,6-000-11-3-001,Bad debt provision expense
+PROFIT & LOSS,6031,Bank Fees,1,2,0,6030,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-7-001,Bank fee expense
+PROFIT & LOSS,6032,Merchant Fees,1,2,0,6030,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-7-002,Merchant fee expense
+PROFIT & LOSS,6033,Interest Charges,1,2,0,6030,Dr,Yes,Never,Interest Expense - External Debt," 1,410,010 ",Interest Expense - External Debt,Interest,Interest Expense - External Debt,9-000-07-2-002,Interest expense - external debt
+PROFIT & LOSS,6034,Interest Expense - Lease Liabilities,1,2,0,6030,Dr,Yes,Never,Interest Expense - Lease Liabilities," 1,410,020 ",Interest Expense - Lease Liabilities,Interest,Interest Expense - Lease Liabilities,9-000-07-2-003,Interest expense - lease
+PROFIT & LOSS,6035,Interest Expense - Related parties,1,2,0,6030,Dr,Yes,Never,Interest Expense - SH Loan," 1,410,040 ",Interest - related party,Interest,Interest - related party,9-000-07-1-888,Intercompany interest income or expense
+PROFIT & LOSS,6042,Client Gifts,1,2,0,6049,Dr,Yes,Never,Advertising & Promotion," 1,201,070 ",Advertising & Promotion,Other opex,Advertising & Promotion,6-000-10-1-003,Client gift expense
+PROFIT & LOSS,6043,Conferences,1,2,0,6049,Dr,Yes,Never,Advertising & Promotion," 1,201,070 ",Advertising & Promotion,Advertising & Marketing,Advertising & Promotion,6-000-01-1-010,Tradeshow & event expense
+PROFIT & LOSS,6044,Room/Equipment Hire,1,2,0,6049,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-01-1-010,Tradeshow & event expense
+PROFIT & LOSS,6047,Entertainment Client,1,2,0,6049,Dr,Yes,Never,Advertising & Promotion," 1,201,070 ",Entertainment,Other opex,Entertainment,6-000-10-1-998,Other client entertainment expense
+PROFIT & LOSS,6048,Entertainment Staff,1,2,0,6049,Dr,Yes,Never,General Administrative," 1,201,100 ",Entertainment,Other opex,Entertainment,6-000-02-9-014,Other employee entertainment expense
+PROFIT & LOSS,6110,Mobile Phones,1,2,0,6600,Dr,Yes,Never,Utilities," 1,201,050 ",Utilities,Other opex,Utilities,6-000-08-2-001,Phone expense
+PROFIT & LOSS,6121,Office Phone WA,1,1,0,6613,Dr,Yes,Never,Utilities," 1,201,050 ",Utilities,Other opex,Utilities,6-000-08-2-001,Phone expense
+PROFIT & LOSS,6122,Office Phone QLD,1,1,0,6623,Dr,Yes,Never,Utilities," 1,201,050 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-08-2-001,Phone expense
+PROFIT & LOSS,6131,Internet WA,1,1,0,6613,Dr,Yes,Never,Utilities," 1,201,050 ",Utilities,Other opex,Utilities,6-000-08-2-001,Phone expense
+PROFIT & LOSS,6132,Internet QLD,1,1,0,6623,Dr,Yes,Never,Utilities," 1,201,050 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-08-2-001,Phone expense
+PROFIT & LOSS,6150,Consultancy,1,2,0,6380,Dr,Yes,Never,Professional Services," 1,201,080 ",Other professional services,Other opex,Other professional services,6-000-06-9-998,Other consulting fee expense
+PROFIT & LOSS,6200,Depreciation,1,2,0,6990,Dr,Yes,Never,SGA - Depreciation," 1,201,000 ",Depreciation expense,D&A,Depreciation expense,9-000-03-1-001,Office equipment depreciation expense
+PROFIT & LOSS,6201,Depreciation - Loan Equipment,1,2,0,6990,Dr,Yes,Never,SGA - Depreciation," 1,201,000 ",Depreciation expense,D&A,Depreciation expense,9-000-03-1-001,Office equipment depreciation expense
+PROFIT & LOSS,6203,Software PPA amortisation expense,1,2,0,6990,Dr,Yes,Never,SGA - Depreciation," 1,201,000 ",Depreciation expense,D&A,Depreciation expense,9-000-03-6-001,Software PPA amortisation expense
+PROFIT & LOSS,6204,Customer relationship PPA amortisation expense,1,2,0,6990,Dr,Yes,Never,SGA - Depreciation," 1,201,000 ",Depreciation expense,D&A,Depreciation expense,9-000-03-6-003,Customer relationship PPA amortisation expense
+PROFIT & LOSS,6205,Intellectual property amortisation expense,1,2,0,6990,Dr,Yes,Never,SGA - Depreciation," 1,201,000 ",Depreciation expense,D&A,Depreciation expense,9-000-03-6-004,Intellectual property amortisation expense
+PROFIT & LOSS,6220,Director's Fees,1,2,0,6380,Dr,Yes,Never,General Administrative," 1,201,100 ",#N/A,Other opex,#N/A,6-000-02-4-002,Director fee expense
+PROFIT & LOSS,6230,Donations,1,2,0,6600,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-6-002,Donation expense
+PROFIT & LOSS,6250,Depreciation - ROU assets,1,2,0,6600,Dr,Yes,Never,SGA - Depreciation for ROU Assets," 1,201,010 ",Depreciation for ROU expense,D&A,Depreciation for ROU expense,9-000-03-3-001,ROU Building depreciation expense
+PROFIT & LOSS,6887,Gain(Loss) on IFRS-16,1,2,0,6030,Dr,Yes,Never,Gain(Loss) on IFRS-16," 1,420,070 ",Leases/ROU assets related income/(losses),Gain(Loss) on IFRS-16,Leases/ROU assets related income/(losses),9-000-08-2-007,Leases/ROU asset related income/(loss)
+PROFIT & LOSS,6299,Foreign Exchange Loss / Gain,1,2,0,6030,Dr,Yes,Never,Trade Forex Gain/(Losses)," 1,300,110 ",Trade Forex Gain/(Losses),Trade Forex Gain/(Losses),Trade Forex Gain/(Losses),9-000-01-1-001,Unrealised FX gain or loss
+PROFIT & LOSS,6300,Courier Expense,1,2,0,6600,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-1-001,Courier and freight expense
+PROFIT & LOSS,6310,Software,1,2,0,6350,Dr,Yes,Never,General Administrative," 1,201,100 ",Software expenses,Other opex,Software expenses,6-000-08-1-004,Software dues and subscription expense
+PROFIT & LOSS,6311,Software-Finance,1,2,0,6350,Dr,Yes,Never,General Administrative," 1,201,100 ",Software expenses,Other opex,Software expenses,6-000-08-1-004,Software dues and subscription expense
+PROFIT & LOSS,6344,Software-IT Cyber Security,1,2,0,6350,Dr,Yes,Never,General Administrative," 1,201,100 ",Software expenses,Other opex,Software expenses,6-000-08-1-001,Cyber security expense
+PROFIT & LOSS,6315,Motor Vehicle Insurance,1,2,0,6369,Dr,Yes,Never,General Administrative," 1,201,100 ",Insurance,Other opex,Insurance,6-000-03-1-005,Motor vehicle insurance expense
+PROFIT & LOSS,6320,IT Service & Support,1,2,0,6350,Dr,Yes,Never,General Administrative," 1,201,100 ",Software expenses,Other opex,Software expenses,6-000-08-1-002,IT support expense
+PROFIT & LOSS,6322,Internal IT Support & Network Ad,1,2,0,6350,Dr,Yes,Never,General Administrative," 1,201,100 ",Software expenses,Other opex,Software expenses,6-000-08-1-002,IT support expense
+PROFIT & LOSS,6325,Liability & Cyber,1,2,0,6369,Dr,Yes,Never,General Administrative," 1,201,100 ",Insurance,Other opex,Insurance,6-000-03-1-004,Management liability insurance expense
+PROFIT & LOSS,6326,Accident & Health,1,2,0,6369,Dr,Yes,Never,General Administrative," 1,201,100 ",Insurance,Other opex,Insurance,6-000-03-1-998,Other insurance expense
+PROFIT & LOSS,6330,Marine Transit,1,2,0,6369,Dr,Yes,Never,General Administrative," 1,201,100 ",Insurance,Other opex,Insurance,6-000-03-1-009,Travel insurance expense
+PROFIT & LOSS,6340,Online services & Cloud Storage,1,2,0,6350,Dr,Yes,Never,General Administrative," 1,201,100 ",Software expenses,Other opex,Software expenses,6-000-08-1-003,Server and data centre expense
+PROFIT & LOSS,6341,Workers Comp WA,1,1,0,6343,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Other opex,Other Employee Expenses,6-000-02-6-008,Workers compensation expense - AU WA
+PROFIT & LOSS,6342,Workers Comp QLD,1,1,0,6343,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Other opex,Other Employee Expenses,6-000-02-6-004,Workers compensation expense - AU QLD
+PROFIT & LOSS,6351,Business WA,1,1,0,6353,Dr,Yes,Never,General Administrative," 1,201,100 ",Insurance,Other opex,Insurance,6-000-03-1-001,Business insurance expense
+PROFIT & LOSS,6352,Business QLD,1,1,0,6353,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-03-1-001,Business insurance expense
+PROFIT & LOSS,6360,Corporate Travel Insurance,1,2,0,6369,Dr,Yes,Never,General Administrative," 1,201,100 ",Insurance,Other opex,Insurance,6-000-03-1-009,Travel insurance expense
+PROFIT & LOSS,6381,Filing Fees/Permits,1,2,0,6380,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-5-003,Annual filing fee expense
+PROFIT & LOSS,6382,Legal Fees,1,2,0,6380,Dr,Yes,Never,Professional Services," 1,201,080 ",Legal expense,Other opex,Legal expense,6-000-06-1-001,HR consulting fee expense
+PROFIT & LOSS,6385,OHS Medical & Safety,1,2,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-003,Employee insurance expense
+PROFIT & LOSS,6400,Sundry Expenses,1,2,0,6990,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-8-998,Other G&A expense
+PROFIT & LOSS,6405,Misc Marketing,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-01-1-998,Other advertising and marketing expense
+PROFIT & LOSS,6410,Digital Advertising,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-01-1-002,Social media expense
+PROFIT & LOSS,6420,Website,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-08-1-006,Website expense
+PROFIT & LOSS,6430,Lead Generation,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-01-1-998,Other advertising and marketing expense
+PROFIT & LOSS,6440,Tradeshows & Events,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-01-1-010,Tradeshow & event expense
+PROFIT & LOSS,6450,Printing & Merchandise,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-01-1-003,Prints and merchandise expense
+PROFIT & LOSS,6460,Subscriptions & Memberships (Marketing),1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-01-1-008,Marketing subscription and membership expense
+PROFIT & LOSS,6470,Marketing Consultants,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Marketing & Market Research,Advertising & Marketing,Marketing & Market Research,6-000-01-1-998,Other advertising and marketing expense
+PROFIT & LOSS,6480,Travel - Flights & Accomm. MKTG,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Travel,Advertising & Marketing,Travel,6-000-09-1-002,Flight expense - Domestic
+PROFIT & LOSS,6485,Travel - Taxi & Vehicle Expenses MKTG,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Travel,Advertising & Marketing,Travel,6-000-09-1-003,Ground travel expense - Domestic
+PROFIT & LOSS,6490,Travel - Meals & Entertainment MKTG,1,2,0,6499,Dr,Yes,Never,Marketing & Market Research," 1,201,060 ",Travel,Advertising & Marketing,Travel,6-000-09-1-004,Per diem food and drink expense - Domestic
+PROFIT & LOSS,6510,Fuel,1,2,0,6549,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-11-2-001,Fuel and oil expense
+PROFIT & LOSS,6520,Registration,1,2,0,6549,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-2-003,Registration expense
+PROFIT & LOSS,6530,Repairs & Maintenance MV,1,2,0,6549,Dr,Yes,Never,Maintenance & Upkeep," 1,201,090 ",Repairs and maintenance,Other opex,Repairs and maintenance,6-000-11-2-002,Motor vehicle R&M expense
+PROFIT & LOSS,6549,MV Total,1,2,0,6549,Dr,Yes,Never,#N/A, SUBTOTAL ,#N/A,#N/A,#N/A,#N/A,#N/A
+PROFIT & LOSS,6611,Rent WA,1,1,0,6613,Dr,Yes,Never,Rental," 1,201,040 ",Rental,Other opex,Rental,7-000-00-2-001,EBITDA Normalisation Pre-IFRS 16 (Cash rent)
+PROFIT & LOSS,6614,Rent WA Reversal Pre IFRS,1,1,0,6613,Dr,Yes,Never,Rental," 1,201,040 ",Rental,Other opex,Rental,9-000-50-2-001,Reversal EBITDA Normalisation Pre-IFRS 16 (Cash rent)
+PROFIT & LOSS,6619,Rent adjustment,1,1,0,6613,Dr,Yes,Never,Rental," 1,201,040 ",Rental,Other opex,Rental,6-000-04-2-003,Office rent sublease income on operating lease
+PROFIT & LOSS,6612,Rent QLD,1,1,0,6623,Dr,Yes,Never,Rental," 1,201,040 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-04-2-003,Office rent sublease income on operating lease
+PROFIT & LOSS,6621,Rates & Taxes WA,1,1,0,6613,Dr,Yes,Never,Rental," 1,201,040 ",Rental,Other opex,Rental,6-000-04-2-011,Property fee expense
+PROFIT & LOSS,6622,Rates & Taxes QLD,1,1,0,6623,Dr,Yes,Never,Maintenance & Upkeep," 1,201,090 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-04-2-011,Property fee expense
+PROFIT & LOSS,6631,Cleaning WA,1,1,0,6613,Dr,Yes,Never,Maintenance & Upkeep," 1,201,090 ",Repairs and maintenance,Other opex,Repairs and maintenance,6-000-04-2-998,Other occupancy expense
+PROFIT & LOSS,6632,Cleaning QLD,1,1,0,6623,Dr,Yes,Never,Maintenance & Upkeep," 1,201,090 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-04-2-998,Other occupancy expense
+PROFIT & LOSS,6641,Utilities WA,1,1,0,6613,Dr,Yes,Never,Utilities," 1,201,050 ",Utilities,Other opex,Utilities,6-000-04-1-001,"Light, power, heating expense"
+PROFIT & LOSS,6642,Utilities QLD,1,1,0,6623,Dr,Yes,Never,Utilities," 1,201,050 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-04-1-001,"Light, power, heating expense"
+PROFIT & LOSS,6651,Repairs & Maintenance WA,1,1,0,6613,Dr,Yes,Never,Maintenance & Upkeep," 1,201,090 ",Repairs and maintenance,Other opex,Repairs and maintenance,6-000-04-2-998,Other occupancy expense
+PROFIT & LOSS,6652,Repairs & Maintenance QLD,1,1,0,6623,Dr,Yes,Never,Maintenance & Upkeep," 1,201,090 ",Office Cost-QLD,#N/A,Office Cost-QLD,6-000-04-2-998,Other occupancy expense
+PROFIT & LOSS,6661,"Office Supplies, Postage, Copier WA",1,1,0,6613,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-11-1-005,Stationery and office consumable expense
+PROFIT & LOSS,6662,"Office Supplies, Postage, Copier QLD",1,1,0,6623,Dr,Yes,Never,General Administrative," 1,201,100 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-11-1-005,Stationery and office consumable expense
+PROFIT & LOSS,6665,Computer & Office Equipment,1,1,0,6623,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-08-1-005,IT low value asset <$1000 expense
+PROFIT & LOSS,6671,Security WA,1,1,0,6613,Dr,Yes,Never,General Administrative," 1,201,100 ",Other Expenses,Other opex,Other Expenses,6-000-04-2-013,Security expense
+PROFIT & LOSS,6672,Security QLD,1,1,0,6623,Dr,Yes,Never,General Administrative," 1,201,100 ",Office Cost-QLD,Other opex,Office Cost-QLD,6-000-04-2-013,Security expense
+PROFIT & LOSS,6699,Royalties,1,2,0,6380,Dr,Yes,Never,Royalties and Management Fee," 1,420,040 ",#N/A,Other opex,#N/A,9-000-05-1-002,Management royalty fee expense
+PROFIT & LOSS,6711,Admin Wages Recovery,1,1,0,6718,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,#N/A,#N/A
+PROFIT & LOSS,6713,Admin Wages,1,1,0,6718,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6714,Admin Wages - Leave Accrual,1,1,0,6718,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-001,Annual leave expense
+PROFIT & LOSS,6715,Admin Wages - LSL Accrual,1,1,0,6718,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-002,Long service leave expense
+PROFIT & LOSS,6719,Stores Recovery,1,1,0,6718,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-999,Employee benefit expense clearing
+PROFIT & LOSS,6716,Admin Wages - Superannuation,1,1,0,6718,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-002,Employee superannuation expense
+PROFIT & LOSS,6717,Bonus,1,1,0,6719,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-2-001,Employee STI expense
+PROFIT & LOSS,6723,WA Sales Wages,1,1,0,6728,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6724,WA Sales Wages - Leave Accrual,1,1,0,6728,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-001,Annual leave expense
+PROFIT & LOSS,6725,WA Sales Wages - LSL Accrual,1,1,0,6728,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-002,Long service leave expense
+PROFIT & LOSS,6726,WA Sales Wages - Superannuation,1,1,0,6728,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-002,Employee superannuation expense
+PROFIT & LOSS,6727,WA Sales Wages - Commissions,1,1,0,6728,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-003,Employee commission expense
+PROFIT & LOSS,6733,QLD Sales Wages,1,1,0,6738,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6734,QLD Sales Wages - Leave Accrual,1,1,0,6738,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-001,Annual leave expense
+PROFIT & LOSS,6735,QLD Sales Wages - LSL Accrual,1,1,0,6738,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-002,Long service leave expense
+PROFIT & LOSS,6736,QLD Sales Wages - Superannuation,1,1,0,6738,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-002,Employee superannuation expense
+PROFIT & LOSS,6737,QLD Sales Wages - Commissions,1,1,0,6738,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-003,Employee commission expense
+PROFIT & LOSS,6743,Production Wages,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6744,Production Wages - Leave Accrual,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-001,Annual leave expense
+PROFIT & LOSS,6745,Production Wages - LSL Accrual,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-002,Long service leave expense
+PROFIT & LOSS,6746,Production Wages - Superannuation,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-002,Employee superannuation expense
+PROFIT & LOSS,6748,Production Wages Recovery,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-999,Employee benefit expense clearing
+PROFIT & LOSS,6753,Engineering Wages,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6754,Engineering Wages - Leave Accrual,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-001,Annual leave expense
+PROFIT & LOSS,6755,Engineering Wages - LSL Accrual,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-002,Long service leave expense
+PROFIT & LOSS,6756,Engineering Wages - Superannuation,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-002,Employee superannuation expense
+PROFIT & LOSS,6757,Engineering Wages - Commissions,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-003,Employee commission expense
+PROFIT & LOSS,6758,Engineering Wages - Recovery,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-999,Employee benefit expense clearing
+PROFIT & LOSS,6783,Systems/Support Wages,,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6786,Systems/Support Wages - Superannuation,,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-002,Employee superannuation expense
+PROFIT & LOSS,6787,Systems/After Hours Support,,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6784,Systems/Support  - Leave Accrual,,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-001,Annual leave expense
+PROFIT & LOSS,6785,Systems/Support - LSL Accrual,,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-002,Long service leave expense
+PROFIT & LOSS,6788,Systems/Support Wages Recovery,,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-999,Employee benefit expense clearing
+PROFIT & LOSS,6763,Marketing Wages,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-001,Employee gross wage expense
+PROFIT & LOSS,6764,Marketing Wages - leave accrual,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-001,Annual leave expense
+PROFIT & LOSS,6765,Marketing Wages - LSL Accrued,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-3-002,Long service leave expense
+PROFIT & LOSS,6766,Marketing Wages - Superannuation,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-002,Employee superannuation expense
+PROFIT & LOSS,6772,Global Teams Fees & Charges,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-5-001,Offshore resourcing expense EOR fee
+PROFIT & LOSS,6773,Global Teams Salaries,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-5-002,Offshore resourcing expense EOR wage
+PROFIT & LOSS,6774,Global Leave Accrued,1,1,0,6749,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-5-003,Offshore resourcing expense EOR other benefit
+PROFIT & LOSS,6877,Payroll Reimbursement Clearing,1,1,0,6749,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-999,Employee benefit expense clearing
+PROFIT & LOSS,6791,Payroll Tax WA,1,1,0,6793,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-7-008,Payroll tax expense - AU WA
+PROFIT & LOSS,6794,Payroll Tax SA,1,1,0,6793,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-7-005,Payroll tax expense - AU SA
+PROFIT & LOSS,6792,Payroll Tax QLD,1,1,0,6793,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-7-004,Payroll tax expense - AU QLD
+PROFIT & LOSS,6795,Fringe Benefits Tax,1,2,0,6890,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-8-001,FBT expense - Domestic
+PROFIT & LOSS,6798,Worker's Compensation Payments,1,1,0,6759,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-1-004,Employee one-off payment expense
+PROFIT & LOSS,6801,R&D Engineering Wages,1,2,0,6890,Dr,Yes,Never,Staff Cost," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-07-1-001,R&D employee benefit expense
+PROFIT & LOSS,6811,Staff Amenities WA,1,1,0,6813,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-007,Employee amenity expense
+PROFIT & LOSS,6812,Staff Amenities QLD,1,1,0,6813,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-007,Employee amenity expense
+PROFIT & LOSS,6820,Staff Events,1,2,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-013,Team event expense
+PROFIT & LOSS,6830,Recruitment,1,2,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-011,Recruitment fee expense
+PROFIT & LOSS,6835,Police Clearance,1,1,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-998,Other employee expense
+PROFIT & LOSS,6840,Staff Gifts,1,2,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-998,Other employee expense
+PROFIT & LOSS,6850,Subscriptions & Memberships - Staff/Corp,1,2,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-006,Employee professional membership expense
+PROFIT & LOSS,6860,Seminars & Workshops,1,2,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-009,Employee training expense
+PROFIT & LOSS,6870,Staff Training,1,2,0,6880,Dr,Yes,Never,Staff Cost," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-02-9-009,Employee training expense
+PROFIT & LOSS,6832,Payroll & HR Consultants,1,2,0,6880,Dr,Yes,Never,Others," 1,201,030 ",Other Employee Expenses,Staff Cost,Other Employee Expenses,6-000-06-1-001,HR consulting fee expense
+PROFIT & LOSS,6833,Outsourced Staffing,1,2,0,6880,Dr,Yes,Never,Others," 1,201,030 ",Wages and salaries,Staff Cost,Wages and salaries,6-000-02-5-002,Offshore resourcing expense EOR wage
+PROFIT & LOSS,6888,Marketing (Omni Inc.),1,2,0,6990,Dr,Yes,Never,General Administrative," 1,300,150 ",Others,Other opex,Others,6-000-01-1-998,Other advertising and marketing expense
+PROFIT & LOSS,6899,Stock Loss / Gain,1,2,0,6990,Dr,Yes,Never,General Administrative," 1,201,120 ",#N/A,General Administrative,#N/A,6-000-11-8-998,Other G&A expense
+PROFIT & LOSS,6913,Travel Allowance - Corporate,1,1,0,6918,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-004,Per diem food and drink expense - Domestic
+PROFIT & LOSS,6916,Travel Allowance - Sales,1,1,0,6928,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-004,Per diem food and drink expense - Domestic
+PROFIT & LOSS,6917,  Travel Allowance - Engineering,1,1,0,6950,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-004,Per diem food and drink expense - Domestic
+PROFIT & LOSS,6923,Flights & Accommodation - Corporate,1,1,0,6918,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-002,Flight expense - Domestic
+PROFIT & LOSS,6926,Flights & Accommodation - Sales,1,1,0,6928,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-002,Flight expense - Domestic
+PROFIT & LOSS,6927,Flights & Accommodation - Engineering,1,1,0,6950,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-002,Flight expense - Domestic
+PROFIT & LOSS,6933,"Parking,Taxis and Car Hire - Corporate",1,1,0,6918,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-003,Ground travel expense - Domestic
+PROFIT & LOSS,6936,"Parking, Taxis and Car Hire - Sales",1,1,0,6928,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-003,Ground travel expense - Domestic
+PROFIT & LOSS,6937,"Parking,Taxis and Car Hire - Engineering",1,1,0,6950,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-003,Ground travel expense - Domestic
+PROFIT & LOSS,6943,Travel meals - Corporate,1,1,0,6918,Dr,Yes,Never,General Administrative," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-004,Per diem food and drink expense - Domestic
+PROFIT & LOSS,6946,Travel Meals - Sales,1,1,0,6928,Dr,Yes,Never,Taxes," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-004,Per diem food and drink expense - Domestic
+PROFIT & LOSS,6949,Travel Meals - Engineering,1,1,0,6950,Dr,Yes,Never,Retained Earnings," 1,201,100 ",Travel,Other opex,Travel,6-000-09-1-004,Per diem food and drink expense - Domestic
+PROFIT & LOSS,7020,Less Income Tax Expense,1,2,0,7030,Cr,Yes,Never,," 1,510,010 ",Income tax expense,Tax,Income tax expense,9-000-49-1-001,Income tax expense - current
+PROFIT & LOSS,7040,Profit B/Fwd,1,2,0,7050,Cr,Yes,Never,," 2,610,000 ",#N/A,#N/A,#N/A,3-000-02-1-001,Retained earnings
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,

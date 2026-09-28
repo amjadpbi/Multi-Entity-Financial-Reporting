@@ -1,0 +1,122 @@
+table 'Balance Sheet'
+	isHidden
+	lineageTag: 5ab0fd61-7195-49fd-b704-eee6b324ab4e
+
+	column 'GL Account #'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b40e1ec7-1fab-4116-bbe0-7b73e5e75e44
+		summarizeBy: sum
+		sourceColumn: GL Account #
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Description'
+		dataType: string
+		isHidden
+		lineageTag: b4bc6499-31df-4758-b738-e5af631a1b8d
+		summarizeBy: none
+		sourceColumn: Account Description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		isHidden
+		lineageTag: d5d92b12-128f-49cb-9f87-df99171819d9
+		summarizeBy: none
+		sourceColumn: Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BS
+		dataType: string
+		isHidden
+		lineageTag: f8d4cf58-7327-4389-b5b3-cfe615f3d81e
+		summarizeBy: none
+		sourceColumn: BS
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column '7. Balance Sheet (High Level)'
+		dataType: string
+		isHidden
+		lineageTag: b75cdb10-65a3-4a9b-9f5b-f5db7d61260e
+		summarizeBy: none
+		sourceColumn: 7. Balance Sheet (High Level)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Consolidation (Trial Balance)'
+		dataType: string
+		isHidden
+		lineageTag: 4c3c8447-65c8-4f7b-83c3-8c392e6908eb
+		summarizeBy: none
+		sourceColumn: Consolidation (Trial Balance)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column '8. Cash Flow'
+		dataType: string
+		isHidden
+		lineageTag: d98538d2-8e33-45aa-9872-da5c4e30a09b
+		summarizeBy: none
+		sourceColumn: 8. Cash Flow
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type.1'
+		dataType: string
+		lineageTag: 2232480b-dfa4-4890-aa9c-6952d61fb9db
+		summarizeBy: none
+		sourceColumn: Type.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: fff01bac-70d5-48c1-ba74-494d4514a7fc
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Balance Sheet' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\hp\Downloads\UPDATED 10_25 - OMNI INC USA Mapping.xlsx"), null, true),
+				    #"Balance Sheet_Sheet" = Source{[Item="Balance Sheet",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(#"Balance Sheet_Sheet",{{"Column1", type any}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type any}, {"Column7", type any}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Column1", type any}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"1", type text}, {"8", type text}}),
+				    #"Promoted Headers1" = Table.PromoteHeaders(#"Changed Type1", [PromoteAllScalars=true]),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Promoted Headers1",{{"Account #", Int64.Type}, {"Account Description", type text}, {"Type", type text}, {"BS", type text}, {"7. Balance Sheet (High Level)", type text}, {"Consolidation (Trial Balance)", type text}, {"8. Cash Flow", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type2",{{"Account #", "GL Account #"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Type.1", each "BALANCE SHEET"),
+				    #"Sorted Rows" = Table.Sort(#"Added Custom",{{"GL Account #", Order.Descending}}),
+				    #"Added Custom1" = Table.AddColumn(#"Sorted Rows", "Country", each "USA")
+				in
+				    #"Added Custom1"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

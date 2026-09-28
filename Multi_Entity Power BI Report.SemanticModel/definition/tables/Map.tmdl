@@ -1,0 +1,138 @@
+table Map
+	lineageTag: 9d1ea787-6dd5-4f58-9a59-62d2ffd27875
+
+	column 'GL Account #'
+		dataType: int64
+		formatString: 0
+		lineageTag: e1ef0b08-4110-4402-89dd-3dd72366d05e
+		summarizeBy: none
+		sourceColumn: GL Account #
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Description'
+		dataType: string
+		lineageTag: 6aa84db0-d665-491d-a074-cc0c7d74a058
+		summarizeBy: none
+		sourceColumn: Account Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 2449ee78-24e6-484a-af5f-3bc3dca9c09b
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column BS
+		dataType: string
+		lineageTag: 6c525a45-5465-481d-89bc-b8e397b369b1
+		summarizeBy: none
+		sourceColumn: BS
+
+		annotation SummarizationSetBy = Automatic
+
+	column '7. Balance Sheet (High Level)'
+		dataType: string
+		lineageTag: 85542bce-34d1-43fb-be1b-7367e999eff2
+		summarizeBy: none
+		sourceColumn: 7. Balance Sheet (High Level)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Consolidation (Trial Balance)'
+		dataType: string
+		lineageTag: 8a37f5c9-a54c-4723-a01d-b51ff88b2eea
+		summarizeBy: none
+		sourceColumn: Consolidation (Trial Balance)
+
+		annotation SummarizationSetBy = Automatic
+
+	column '8. Cash Flow'
+		dataType: string
+		lineageTag: bd53c24f-e31d-4261-bc95-5de93ad718d9
+		summarizeBy: none
+		sourceColumn: 8. Cash Flow
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type.1'
+		dataType: string
+		lineageTag: c1e24ba1-08b6-4abc-95c0-24eb5e07257a
+		summarizeBy: none
+		sourceColumn: Type.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 9197a705-44d1-44fc-88bd-d0b6be469a09
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Omnitronics Inc P&L (EBITDA)'
+		dataType: string
+		lineageTag: 033d9ce2-6164-4959-81ee-ad214fac784c
+		summarizeBy: none
+		sourceColumn: Omnitronics Inc P&L (EBITDA)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GP by product'
+		dataType: string
+		lineageTag: 04a02496-06e7-4c38-9067-94ca2f9977ac
+		summarizeBy: none
+		sourceColumn: GP by product
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annual budget  FY26 (Consolidated)'
+		dataType: string
+		lineageTag: 2bf6b22e-f8b9-474c-88c2-2a13e65ab059
+		summarizeBy: none
+		sourceColumn: Annual budget  FY26 (Consolidated)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'P&L (EBITDA High Level)'
+		dataType: string
+		lineageTag: 8f004966-6b43-42d3-b54d-de7710bc7b57
+		summarizeBy: none
+		sourceColumn: P&L (EBITDA High Level)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual v Budget by entity '
+		dataType: int64
+		formatString: 0
+		lineageTag: 15b7a101-6bb2-421c-9f29-120e3a52415c
+		summarizeBy: sum
+		sourceColumn: "Actual v Budget by entity "
+
+		annotation SummarizationSetBy = Automatic
+
+	column Eliminations
+		dataType: string
+		lineageTag: 4ee50ce2-496a-47a5-bf85-915b57559d63
+		summarizeBy: none
+		sourceColumn: Eliminations
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Map = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({Map_, #"Balance Sheet", #"P&L", #"P&L (2)", BS}),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Column6", "Column7", "Eliminations Remarks", "Column5"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

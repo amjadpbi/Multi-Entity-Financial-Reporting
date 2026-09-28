@@ -1,0 +1,106 @@
+"OMNITRONICS, INC.",,
+Profit and Loss,,
+"January 1 - September 15, 2025",,
+,,
+,Jul 2025,Aug 2025
+Income,,
+   10000 Sales,0.00  ,0.00  
+      10008 Support & Maintenance,"8,711.80  ","12,789.10  "
+      10009 Project Services,"4,200.00  ",
+      10010 Other Licences_Software,"2,437.50  ",
+      10019 Third Party Product Sales,"1,674.40  ","2,927.50  "
+      10020 Hardware Sales,"21,517.45  ","7,147.45  "
+      10030 Development,,
+      10050 omnicore Software_Licences,"5,362.50  ",
+   Total 10000 Sales,"$43,903.65  ","$22,864.05  "
+Total Income,"$43,903.65  ","$22,864.05  "
+Cost of Goods Sold,,
+   40001 Cost of Goods Sold,0.00  ,
+      40009 Project Services,,864.50  
+      40020 Hardware COGS,"11,802.92  ","7,289.31  "
+      40050 omnicore Software_Licence COGS,"4,485.00  ",
+      41008 Third Party Products,"1,050.58  ","1,404.20  "
+      41010 Other Licences,"1,725.00  ",
+   Total 40001 Cost of Goods Sold,"$19,063.50  ","$9,558.01  "
+   41090 Inventory Shrinkage,,
+   41091 Inventory Damage/ Loss,,
+   41100 Freight charges,-189.09  ,478.65  
+   45000 Support Services,"5,970.55  ",112.42  
+Total Cost of Goods Sold,"$24,844.96  ","$10,149.08  "
+Gross Profit,"$19,058.69  ","$12,714.97  "
+Expenses,,
+   60000 Marketing,,
+      60010 Advertising & Promotions,,
+      60020 Trade Shows,"2,445.00  ","5,905.00  "
+      60025 Printing & Merchandise,,
+   Total 60000 Marketing,"$2,445.00  ","$5,905.00  "
+   60400 Bank Service Charges,-150.32  ,-104.75  
+      60401 Merchant Account Fees,25.00  ,20.00  
+   Total 60400 Bank Service Charges,-$125.32  ,-$84.75  
+   61800 Software Expense,259.00  ,259.00  
+   62400 Depreciation Expense,552.87  ,
+   62500 Dues and Subscriptions,,183.33  
+   63300 Insurance Expense,,
+      63310 General Liability Insurance,362.25  ,362.25  
+      63320 Motor Vehicle Insurance,94.33  ,94.33  
+      63360 Worker's Compensation,197.08  ,197.08  
+      63370 Property Insurance,131.93  ,131.93  
+   Total 63300 Insurance Expense,$785.59  ,$785.59  
+   64500 Entertainment,,
+      64510 Client Entertainment - Local,,89.29  
+      64520 Staff Entertainment-100% Dedu,,89.29  
+   Total 64500 Entertainment,$0.00  ,$178.58  
+   64700 Miscellaneous Expense,,
+   65000 Taxes Paid,,
+      65050 Federal Corporate Tax,,
+   Total 65000 Taxes Paid,$0.00  ,$0.00  
+   66700 Professional Fees,,
+   66800 Payroll Related Expenses,,
+      66801 Salaries & Wages,"18,855.44  ","22,055.98  "
+      66802 Bonus,,
+      66806 Commissions Paid,585.05  ,64.85  
+      66820 Payroll Taxes,,
+         66840 Federal Payroll Taxes,"1,733.70  ","1,674.81  "
+      Total 66820 Payroll Taxes,"$1,733.70  ","$1,674.81  "
+      66850 Health Insurance,"2,943.48  ","2,943.48  "
+      66860 Vacation expense accrued,"1,796.79  ","1,179.09  "
+      66899 Payroll Clearing Account,0.00  ,546.96  
+   Total 66800 Payroll Related Expenses,"$25,914.46  ","$28,465.17  "
+   67100 Office Expenses,,
+      67105 Office Rental,244.63  ,244.63  
+      67110 Stationery & Office Consumables,33.60  ,15.43  
+      67120 Postage and Delivery,,
+      67500 Telephone/Communication Expense,824.89  ,116.40  
+   Total 67100 Office Expenses,"$1,103.12  ",$376.46  
+   68200 US Warehouse & Logistics,332.55  ,620.60  
+   68400 Travel,,
+      68405 Travel - Business Development,,80.08  
+         68410 Accommodation - Business Development,"-1,085.92  ","1,652.82  "
+         68415 Flights - Business Development,"6,744.60  ",718.76  
+         68420 Meals and Entertainment - Business Development,743.43  ,"1,369.44  "
+         68450 Taxis & Car Rental - Business Development,"1,934.90  ",667.73  
+      Total 68405 Travel - Business Development,"$8,337.01  ","$4,488.83  "
+      68460 Trade Shows Travel,,
+         68465 Flights - Trade Shows,,
+         68470 Accommodation - Trade Shows,,
+         68472 Meals & Entertainment - Trade Shows,,
+         68475 Taxis & Car Rental - Trade Shows,,
+      Total 68460 Trade Shows Travel,$0.00  ,$0.00  
+   Total 68400 Travel,"$8,337.01  ","$4,488.83  "
+   69900 Sales & Marketing Services-Recovery,,
+Total Expenses,"$39,604.28  ","$41,177.81  "
+Net Operating Income,"-$20,545.59  ","-$28,462.84  "
+Other Income,,
+   70000 Finance Charge Income,,
+   70200 Interest Income,0.01  ,0.01  
+   70220 Other Income,16.19  ,426.17  
+Total Other Income,$16.20  ,$426.18  
+Other Expenses,,
+   Unrealized Gain or Loss,0.00  ,0.00  
+Total Other Expenses,$0.00  ,$0.00  
+Net Other Income,$16.20  ,$426.18  
+Net Income,"-$20,529.39  ","-$28,036.66  "
+,,
+,,
+,,
+"Monday, Sep 15, 2025 11:11:06 PM GMT-7 - Accrual Basis",,

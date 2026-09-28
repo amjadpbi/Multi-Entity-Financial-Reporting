@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Multi_Entity Power BI Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "17c6bcd3-cd3d-497b-91fa-c721d2e6d269"
+  }
+}

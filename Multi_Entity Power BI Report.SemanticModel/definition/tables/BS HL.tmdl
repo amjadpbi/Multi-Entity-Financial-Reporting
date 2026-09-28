@@ -1,0 +1,52 @@
+table 'BS HL'
+	lineageTag: 6de3edc8-f713-4218-8391-03d848d8aa8b
+
+	column 'BS HL'
+		lineageTag: e934c1d3-3295-438d-b7be-15618f498bd9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: UT & US Data 2025-26[BS HL]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH
+		lineageTag: e25b4659-a443-4555-a926-bad97a2b5c9e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: MONTH[MONTH]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Actual =
+			IF(ISBLANK(CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26',
+			'UT & US Data 2025-26'[Month] = 'BS HL'[MONTH] &&
+			'UT & US Data 2025-26'[BS HL] = 'BS HL'[BS HL] &&
+			'UT & US Data 2025-26'[Year] = 2026
+			)
+			)),0,
+			CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26',
+			'UT & US Data 2025-26'[Month] = 'BS HL'[MONTH] &&
+			'UT & US Data 2025-26'[BS HL] = 'BS HL'[BS HL] &&
+			'UT & US Data 2025-26'[Year] = 2026)))
+		formatString: #,0.00
+		lineageTag: 8c6fd46d-74a0-4e8f-9438-b4c788f7b879
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'BS HL' = calculated
+		mode: import
+		source =
+				
+				CROSSJOIN(
+				    FILTER(
+				        DISTINCT('UT & US Data 2025-26'[BS HL]),
+				        NOT(ISBLANK('UT & US Data 2025-26'[BS HL]))
+				        ),
+				        DISTINCT('MONTH'[MONTH])
+				    )
+
+	annotation PBI_Id = 87893f12de5243eb91de794cea5e02e3
+

@@ -1,0 +1,156 @@
+table 'Budget FY26'
+	lineageTag: 4a44d2ae-1a57-4f16-8cc3-a7062899d318
+
+	column Entity
+		dataType: string
+		lineageTag: b6ce15ae-06f2-4477-bb94-dc993a55739b
+		summarizeBy: none
+		sourceColumn: Entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column CC
+		dataType: int64
+		formatString: 0
+		lineageTag: dfb9f567-f6cd-4744-bb8b-f144f68b3699
+		summarizeBy: sum
+		sourceColumn: CC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'PROFIT & LOSS'
+		dataType: string
+		lineageTag: f827b709-afca-48dc-902f-b2f3436d72f8
+		summarizeBy: none
+		sourceColumn: PROFIT & LOSS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Deck Mapping'
+		dataType: string
+		lineageTag: e6115b0c-ff48-4691-b28e-e437d26c77ed
+		summarizeBy: none
+		sourceColumn: Deck Mapping
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FY 2026 BUDGET'
+		dataType: double
+		lineageTag: 77964530-f2f1-4a71-81da-33dc81d1d3bb
+		summarizeBy: sum
+		sourceColumn: FY 2026 BUDGET
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NETSUITE
+		dataType: string
+		lineageTag: dc82540a-762d-4001-a35e-f335df4626f2
+		summarizeBy: none
+		sourceColumn: NETSUITE
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NETSUITE 2'
+		dataType: string
+		lineageTag: b8cfdc94-b418-4898-912a-4a9bc473deed
+		summarizeBy: none
+		sourceColumn: NETSUITE 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'LEVEL1 Netsuite'
+		dataType: string
+		lineageTag: 68e01360-d443-4d83-9fce-29ec598278a4
+		summarizeBy: none
+		sourceColumn: LEVEL1 Netsuite
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Level 2'
+		dataType: string
+		lineageTag: da6a40ff-f9ba-47b9-8cec-ec0a0e80a756
+		summarizeBy: none
+		sourceColumn: Level 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Per Softcom upload ( Old)'
+		dataType: string
+		lineageTag: dd88da23-c67d-45b5-93f3-05c5560f1e80
+		summarizeBy: none
+		sourceColumn: Per Softcom upload ( Old)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'COGS Sub Mapping'
+		dataType: string
+		lineageTag: f2fa4a19-47fd-41b0-85c5-bdc7c64afad5
+		summarizeBy: none
+		sourceColumn: COGS Sub Mapping
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7c0ab0ad-ce9c-42bf-9b89-ac10fd0e0a45
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: a4a1e33f-ea65-4ce9-96af-3b0df909f987
+			defaultHierarchy: LocalDateTable_c13b81d9-e8e4-493b-ac78-39fd6532f73d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Amount
+		dataType: double
+		lineageTag: ca171a66-fb6f-413f-bcd0-4487d00eb83a
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Month
+		dataType: string
+		lineageTag: 722f9aa9-ad3e-4aae-b1da-17a4bcb110ab
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Budget FY26' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\Power BI\Data 1 Financial\Budget FY 2026.xlsx"), null, true),
+				    #"Budget FY26_Sheet" = Source{[Item="Budget FY26",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(#"Budget FY26_Sheet",{{"Column1", type text}, {"Column2", type any}, {"Column3", type text}, {"Column4", type any}, {"Column5", type any}, {"Column6", type any}, {"Column7", type any}, {"Column8", type any}, {"Column9", type any}, {"Column10", type any}, {"Column11", type any}, {"Column12", type any}, {"Column13", type any}, {"Column14", type any}, {"Column15", type any}, {"Column16", type any}, {"Column17", type any}, {"Column18", type any}, {"Column19", type any}, {"Column20", type any}, {"Column21", type any}, {"Column22", type any}, {"Column23", type any}, {"Column24", type any}, {"Column25", type any}, {"Column26", type any}, {"Column27", type any}, {"Column28", type any}, {"Column29", type any}, {"Column30", type any}, {"Column31", type any}, {"Column32", type any}, {"Column33", type any}, {"Column34", type any}, {"Column35", type any}, {"Column36", type any}, {"Column37", type any}, {"Column38", type any}, {"Column39", type any}, {"Column40", type any}, {"Column41", type any}, {"Column42", type any}, {"Column43", type any}, {"Column44", type any}, {"Column45", type any}, {"Column46", type any}, {"Column47", type any}, {"Column48", type any}, {"Column49", type any}, {"Column50", type any}, {"Column51", type any}, {"Column52", type any}, {"Column53", type any}, {"Column54", type any}, {"Column55", type any}, {"Column56", type any}, {"Column57", type any}, {"Column58", type any}, {"Column59", type any}, {"Column60", type any}, {"Column61", type any}, {"Column62", type any}, {"Column63", type any}, {"Column64", type any}, {"Column65", type any}, {"Column66", type any}, {"Column67", type any}, {"Column68", type any}, {"Column69", type any}, {"Column70", type any}, {"Column71", type any}, {"Column72", type any}, {"Column73", type any}, {"Column74", type any}, {"Column75", type any}, {"Column76", type any}, {"Column77", type any}, {"Column78", type any}, {"Column79", type any}, {"Column80", type any}, {"Column81", type any}, {"Column82", type any}, {"Column83", type any}, {"Column84", type any}, {"Column85", type any}, {"Column86", type any}, {"Column87", type any}, {"Column88", type any}, {"Column89", type any}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Column1", type text}, {"Column2", type any}, {"Column3", type text}, {"Column4", type any}, {"Column5", type any}, {"Column6", type any}, {"Column7", type any}, {"Column8", type any}, {"Column9", type any}, {"Column10", type any}, {"Column11", type any}, {"Column12", type any}, {"Column13", type any}, {"Column14", type any}, {"Column15", type any}, {"Column16", type any}, {"Column17", type any}, {"Column18", type any}, {"Column19", type any}, {"Column20", type any}, {"Column21", type any}, {"Column22", type any}, {"Column23", type any}, {"Column24", type any}, {"Column25", type any}, {"Column26", type any}, {"Column27", type any}, {"Column28", type any}, {"Column29", type any}, {"Column30", type any}, {"Column31", type any}, {"Column32", type any}, {"Column33", type any}, {"Column34", type any}, {"Column35", type any}, {"Column36", type any}, {"Column37", type any}, {"Column38", type any}, {"Column39", type any}, {"Column40", type any}, {"Column41", type any}, {"Column42", type any}, {"Column43", type any}, {"Column44", type any}, {"Column45", type any}, {"Column46", type any}, {"Column47", type any}, {"Column48", type any}, {"Column49", type any}, {"Column50", type any}, {"Column51", type any}, {"Column52", type any}, {"Column53", type any}, {"Column54", type any}, {"Column55", type any}, {"Column56", type any}, {"Column57", type any}, {"Column58", type any}, {"Column59", type any}, {"Column60", type any}, {"Column61", type any}, {"Column62", type any}, {"Column63", type any}, {"Column64", type any}, {"Column65", type any}, {"Column66", type any}, {"Column67", type any}, {"Column68", type any}, {"Column69", type any}, {"Column70", type any}, {"Column71", type any}, {"Column72", type any}, {"Column73", type any}, {"Column74", type any}, {"Column75", type any}, {"Column76", type any}, {"Column77", type any}, {"Column78", type any}, {"Column79", type any}, {"Column80", type any}, {"Column81", type any}, {"Column82", type any}, {"Column83", type any}, {"Column84", type any}, {"Column85", type any}, {"Column86", type any}, {"Column87", type any}, {"Column88", type any}, {"Column89", type any}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type1",1),
+				    #"Promoted Headers1" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Promoted Headers1",{{"Entity", type text}, {"CC", Int64.Type}, {"PROFIT & LOSS", type text}, {"Deck Mapping", type any}, {"FY 2026 BUDGET", type number}, {"01/07/2025", type number}, {"01/08/2025", type number}, {"01/09/2025", type number}, {"01/10/2025", type number}, {"01/11/2025", type number}, {"01/12/2025", type number}, {"01/01/2026", type number}, {"01/02/2026", type number}, {"01/03/2026", type number}, {"01/04/2026", type number}, {"01/05/2026", type number}, {"01/06/2026", type number}, {"NETSUITE", type any}, {"NETSUITE 2", type any}, {"LEVEL1 Netsuite", type any}, {"Level 2", type any}, {"Per Softcom upload ( Old)", type any}, {"COGS Sub Mapping", type any}, {"Column24", type any}, {"Column25", type any}, {"Column26", type any}, {"Column27", type any}, {"Column28", type any}, {"Column29", type any}, {"Column30", type any}, {"Column31", type any}, {"Column32", type any}, {"Column33", type any}, {"Column34", type any}, {"Column35", type any}, {"Column36", type any}, {"Column37", type any}, {"Column38", type any}, {"Column39", type any}, {"Column40", type any}, {"Column41", type any}, {"Column42", type any}, {"Column43", type any}, {"Column44", type any}, {"Column45", type any}, {"Column46", type any}, {"Column47", type any}, {"Column48", type any}, {"Column49", type any}, {"Column50", type any}, {"Column51", type any}, {"Column52", type any}, {"Column53", type any}, {"Column54", type any}, {"Column55", type any}, {"Column56", type any}, {"Column57", type any}, {"Column58", type any}, {"Column59", type any}, {"Column60", type any}, {"Column61", type any}, {"Column62", type any}, {"Column63", type any}, {"Column64", type any}, {"Column65", type any}, {"Column66", type any}, {"Column67", type any}, {"Column68", type any}, {"Column69", type any}, {"Column70", type any}, {"Column71", type any}, {"Column72", type any}, {"Column73", type any}, {"Column74", type any}, {"Column75", type any}, {"Column76", type any}, {"Column77", type any}, {"Column78", type any}, {"Column79", type any}, {"Column80", type any}, {"Column81", type any}, {"Column82", type any}, {"Column83", type any}, {"Column84", type any}, {"Column85", type any}, {"Column86", type any}, {"Column87", type any}, {"Column88", type any}, {"Column89", type any}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type2",{"Column25", "Column26", "Column27", "Column28", "Column29", "Column30", "Column31", "Column32", "Column33", "Column34", "Column35", "Column36", "Column37", "Column38", "Column39", "Column40", "Column41", "Column42", "Column43", "Column44", "Column45", "Column46", "Column47", "Column48", "Column49", "Column50", "Column51", "Column52", "Column53", "Column54", "Column55", "Column56", "Column57", "Column58", "Column59", "Column60", "Column61", "Column62", "Column63", "Column64", "Column65", "Column66", "Column67", "Column68", "Column69", "Column70", "Column71", "Column72", "Column73", "Column74", "Column75", "Column76", "Column77", "Column78", "Column79", "Column80", "Column81", "Column82", "Column83", "Column84", "Column85", "Column86", "Column87", "Column88", "Column89", "Column24"}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Removed Columns", {{"Entity", null}, {"CC", null}, {"PROFIT & LOSS", null}, {"Deck Mapping", null}, {"FY 2026 BUDGET", null}, {"01/07/2025", null}, {"01/08/2025", null}, {"01/09/2025", null}, {"01/10/2025", null}, {"01/11/2025", null}, {"01/12/2025", null}, {"01/01/2026", null}, {"01/02/2026", null}, {"01/03/2026", null}, {"01/04/2026", null}, {"01/05/2026", null}, {"01/06/2026", null}, {"NETSUITE", null}, {"NETSUITE 2", null}, {"LEVEL1 Netsuite", null}, {"Level 2", null}, {"Per Softcom upload ( Old)", null}, {"COGS Sub Mapping", null}}),
+				    #"Unpivoted Only Selected Columns" = Table.Unpivot(#"Replaced Errors", {"01/07/2025", "01/08/2025", "01/09/2025", "01/10/2025", "01/11/2025", "01/12/2025", "01/01/2026", "01/02/2026", "01/03/2026", "01/04/2026", "01/05/2026", "01/06/2026"}, "Attribute", "Value"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Unpivoted Only Selected Columns",{{"Value", "Amount"}, {"Attribute", "Date"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Month", each Date.ToText([Date], "MMMM")),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom",{{"Date", type date}}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type3", {{"Date", type date}}, "en-US"),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type with Locale",{"Month"}),
+				    #"Added Custom1" = Table.AddColumn(#"Removed Columns1", "Month", each Date.ToText([Date], "MMMM"))
+				in
+				    #"Added Custom1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

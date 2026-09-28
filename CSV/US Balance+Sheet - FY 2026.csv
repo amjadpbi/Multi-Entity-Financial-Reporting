@@ -1,0 +1,117 @@
+"OMNITRONICS, INC.",
+Balance Sheet,
+"As of July 31, 2025",
+,
+,Jul 2025
+ASSETS,
+   Current Assets,
+      Bank Accounts,
+         91000 Perth Clearing Acccount,0.00  
+         91100 Bank of America Savings - 6745,853.92  
+         91200 Bank of America Checking - 5640,"203,872.55  "
+         91201 BoA Debit Account - 8086,0.00  
+         91300 Airwallex USD,"25,787.95  "
+         91400 Petty Cash,0.00  
+      Total Bank Accounts,"$230,514.42  "
+      Accounts Receivable,
+         91700 Accounts Receivable,"216,932.20  "
+            91703 Allowance for ECL,"-4,419.23  "
+         Total 91700 Accounts Receivable,"$212,512.97  "
+         91701 Allowance for Doubtful Accounts,0.00  
+         91702 Sundry Debtors,0.00  
+      Total Accounts Receivable,"$212,512.97  "
+      Other Current Assets,
+         91500 Undeposited Funds,0.00  
+         91900 Inventory Asset,0.00  
+            91907 DX-64 Digital Radio,0.00  
+            91908 Third Party Products,"19,282.18  "
+            91909 Licences - Other,0.00  
+            91920 Hardware - Omnitronics,"215,118.60  "
+            91950 omnicore,0.00  
+            91951 omnicore software,0.00  
+            91999 Items out on loan,0.00  
+         Total 91900 Inventory Asset,"$234,400.78  "
+         91911 Provision for Inventory Write Off,0.00  
+         92100 EXCHANGE/REPAIR STOCK,0.00  
+         94500 Prepayments,"10,658.03  "
+         99998 Uncategorized Asset,0.00  
+      Total Other Current Assets,"$245,058.81  "
+   Total Current Assets,"$688,086.20  "
+   Fixed Assets,
+      91800 Purchase,0.00  
+      93000 Furniture and Equipment,0.00  
+      93001 Leasehold Improvements,0.00  
+      94000 Office Equipment,"1,326.79  "
+      94250 Accumulated Depreciation-Office Equipment,"-1,326.79  "
+   Total Fixed Assets,$0.00  
+   Other Assets,
+      94501 Deposits Paid,"1,000.00  "
+   Total Other Assets,"$1,000.00  "
+TOTAL ASSETS,"$689,086.20  "
+LIABILITIES AND EQUITY,
+   Liabilities,
+      Current Liabilities,
+         Accounts Payable,
+            95300 Accounts Payable,"152,716.06  "
+            95302 Accounts Payable (A/P) - CAD,0.00  
+            95303 Accounts Payable (A/P) - EUR,0.00  
+         Total Accounts Payable,"$152,716.06  "
+         Other Current Liabilities,
+            21105 Revenue in Advance,"26,092.57  "
+            21106 SMA Income in Advance,"94,357.46  "
+            24000 Payroll Liabilities,"10,284.71  "
+               24001 RI Income Tax,0.00  
+               24002 FL Department of Revenue Payable,0.00  
+               24003 MS Income Tax,0.00  
+               24004 MS Unemployment Tax,0.00  
+               24005 VA Income Tax,0.00  
+               24007 VA SUI Employer,0.00  
+               24008 IL Income Tax,0.00  
+               24009 IL Unemployment Tax,0.00  
+               24010 LA Income Tax,0.00  
+               24011 LA Unemployment Tax,0.00  
+               24050 MetLife,0.00  
+               24100 Federal payroll liability,0.00  
+               24200 State SUI Payroll,0.00  
+               24300 Health Insurance-1,0.00  
+               24499 Direct Deposit Payable,0.00  
+               24500 Payroll Accrual,"59,735.06  "
+               24550 Commissions Payable,0.00  
+               24560 United Healthcare Insurance - Spouse 50%,0.00  
+               Expensed twice through Airwallex,0.00  
+               Reimbursement A/W - Renaissance Waterford,0.00  
+            Total 24000 Payroll Liabilities,"$70,019.77  "
+            25500 Sales Tax Payable,0.00  
+               25501 Florida Department of Revenue Payable,0.00  
+               25502 Boston Payable,0.00  
+               25503 NC Department of Revenue Payable,0.00  
+               25504 Indiana Department of Revenue Payable,"5,822.11  "
+               25505 New York State Department of Tax & Finance Payable,0.00  
+               25506 Ohio Payable,0.00  
+               25507 Arkansas Payable,0.00  
+               25508 State of North Carolina Payable,0.00  
+               25509 WA Payable,"1,525.29  "
+               25511 California Department of Tax and Fee Administration Payable,"3,389.05  "
+               25512 NEW JERSEY DIVISION OF REVENUE Payable,282.36  
+               25513 Wyoming Department of Revenue Payable,18.10  
+               25520 Out Of Scope Agency Payable,0.00  
+               25530 Sales Tax Agency Payable,0.00  
+               25540 Reseller Payable,0.00  
+            Total 25500 Sales Tax Payable,"$11,036.91  "
+            25700 Accrued Expenses,"3,947.10  "
+            26000 Income Tax Payable,"8,145.83  "
+            28000 Loan - Omnitronics Australia,"-57,629.54  "
+         Total Other Current Liabilities,"$155,970.10  "
+      Total Current Liabilities,"$308,686.16  "
+   Total Liabilities,"$308,686.16  "
+   Equity,
+      30000 Opening Balance Equity,0.00  
+      39000 Capital Stock,"1,000.00  "
+      39200 Retained Earnings,"324,848.45  "
+      Net Income,"54,551.59  "
+   Total Equity,"$380,400.04  "
+TOTAL LIABILITIES AND EQUITY,"$689,086.20  "
+,
+,
+,
+"Friday, Aug 01, 2025 01:12:22 AM GMT-7 - Accrual Basis",

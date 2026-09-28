@@ -1,0 +1,113 @@
+table 'UT Balance Sheet FY 2026'
+	isHidden
+	lineageTag: a1746043-4c7d-443b-a261-a67311e539f9
+
+	column 'GL Account'
+		dataType: string
+		isHidden
+		lineageTag: f1ef246c-3dca-417c-8ef0-bcc1ab1bd926
+		summarizeBy: none
+		sourceColumn: GL Account
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GL Code'
+		dataType: string
+		isHidden
+		lineageTag: 3f8a1423-db92-46be-9d42-377e18170d40
+		summarizeBy: none
+		sourceColumn: GL Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		isHidden
+		lineageTag: 28c45d98-ce67-46ee-81c6-fd2f2d983b8c
+		summarizeBy: none
+		sourceColumn: Month
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: decimal
+		isHidden
+		formatString: 0
+		lineageTag: 1210f9eb-923e-43c5-b527-670f57860ea9
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		isHidden
+		lineageTag: 254d7abc-66ad-4042-b0d4-9ca809bce028
+		summarizeBy: none
+		sourceColumn: Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		isHidden
+		lineageTag: 91364ed6-1d7c-423a-8239-3ebd316503a7
+		summarizeBy: none
+		sourceColumn: Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a0651461-9baf-49cb-a4e5-e174e4c6b716
+		summarizeBy: sum
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'UT Balance Sheet FY 2026' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Power BI\Data 1 Financial\CSV\UT Balance Sheet FY 2026.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", type text}, {"_1", type text}, {"_2", type text}, {"July      NY", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"_1"}),
+				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Removed Columns", {"", "_2"}, "Attribute", "Value"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Unpivoted Other Columns",{{"", "GL Code"}, {"_2", "GL Account"}, {"Attribute", "Month"}, {"Value", "Amount"}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Renamed Columns", "Month", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Month.1", "Month.2"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Month.1", type text}, {"Month.2", type text}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type1",{{"Month.1", "Month"}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Renamed Columns1",{"Month.2"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns1", "Type", each "BALANCE SHEET"),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Country", each "AUS"),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom1",{{"Country", type text}}),
+				    #"Added Custom2" = Table.AddColumn(#"Changed Type2", "Year", each "2026"),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Added Custom2",{"GL Code", "GL Account", "Type", "Month", "Year", "Amount", "Country"}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Reordered Columns",{{"Year", Text.Trim, type text}}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Trimmed Text",{{"Year", Int64.Type}, {"Amount", Currency.Type}})
+				in
+				    #"Changed Type3"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

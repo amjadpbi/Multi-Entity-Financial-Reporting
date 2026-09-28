@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "cdf278f2935b06aeec34",
+  "displayName": "GP by Product",
+  "displayOption": "ActualSize",
+  "height": 1500,
+  "width": 1500
+}

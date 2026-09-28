@@ -1,0 +1,129 @@
+table 'US P&L FY 2025'
+	isHidden
+	lineageTag: 5519c059-df90-45fd-93cb-0ebd9715ada0
+
+	column 'GL Code'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 004a4ba8-77a1-4545-a13b-a96c0f7c8ff7
+		summarizeBy: count
+		sourceColumn: GL Code
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GL Account'
+		dataType: string
+		isHidden
+		lineageTag: 8f7dabc3-5311-4939-99e8-be72abbde23a
+		summarizeBy: none
+		sourceColumn: GL Account
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		isHidden
+		lineageTag: dd2df265-73a0-4e86-b5b6-322b9856bf6f
+		summarizeBy: none
+		sourceColumn: Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: decimal
+		isHidden
+		formatString: "Rs"#,0.###############;-"Rs"#,0.###############;"Rs"#,0.###############
+		lineageTag: 04796aed-b5b8-400c-9957-69995689512e
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-PK"}
+
+	column Country
+		dataType: string
+		isHidden
+		lineageTag: 91d0693b-2a57-4c97-8af1-4596098896f1
+		summarizeBy: none
+		sourceColumn: Country
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e176e8b5-0927-4b0e-8066-5b8be19b6395
+		summarizeBy: sum
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		isHidden
+		lineageTag: 1cae6a88-a656-4ceb-8f32-eb2e09399d50
+		summarizeBy: none
+		sourceColumn: Month
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'US P&L FY 2025' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\Power BI\Data 1 Financial\CSV\OMNITRONICS,+INC._Profit+and+Loss - FY 2025.csv"),[Delimiter=",", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}, {"Column13", type text}, {"Column14", type text}}),
+				    #"Removed Top Rows" = Table.Skip(#"Changed Type",4),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Top Rows",{"Column14"}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Columns", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"", type text}, {"Jul 2024", type text}, {"Aug 2024", type text}, {"Sep 2024", type text}, {"Oct 2024", type text}, {"Nov 2024", type text}, {"Dec 2024", type text}, {"Jan 2025", type text}, {"Feb 2025", type text}, {"Mar 2025", type text}, {"Apr 2025", type text}, {"May 2025", type text}, {"Jun 2025", type text}}),
+				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Changed Type1", {""}, "Attribute", "Value"),
+				    #"Sorted Rows" = Table.Sort(#"Unpivoted Other Columns",{{"", Order.Ascending}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Sorted Rows", "Attribute", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"Attribute.1", "Attribute.2"}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Attribute.1", type text}, {"Attribute.2", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type2",{{"Attribute.1", "Month"}, {"Attribute.2", "Year"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns",{"", "Month", "Value", "Year"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Reordered Columns",{{"Value", "Amount"}}),
+				    #"Sorted Rows1" = Table.Sort(#"Renamed Columns1",{{"Amount", Order.Descending}}),
+				    #"Trimmed Text" = Table.TransformColumns(#"Sorted Rows1",{{"", Text.Trim, type text}}),
+				    #"Split Column by Delimiter1" = Table.SplitColumn(#"Trimmed Text", "", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {".1", ".2"}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Split Column by Delimiter1",{{".1", Int64.Type}, {".2", type text}}),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Changed Type3",{{".1", "GL Code"}, {".2", "GL Account"}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Renamed Columns2", {{"GL Code", null}}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Errors", "Type", each "PROFIT & LOSS"),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Country", each "USA"),
+				    #"Reordered Columns1" = Table.ReorderColumns(#"Added Custom1",{"GL Code", "GL Account", "Type", "Month", "Year", "Amount", "Country"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Reordered Columns1",{"Year"}),
+				    #"Added Custom2" = Table.AddColumn(#"Removed Columns1", "Year", each "2025"),
+				    #"Reordered Columns2" = Table.ReorderColumns(#"Added Custom2",{"GL Code", "GL Account", "Type", "Month", "Year", "Amount", "Country"}),
+				    #"Added Custom3" = Table.AddColumn(#"Reordered Columns2", "Month 2", each if [Month] = "Jan" then "January" else if [Month] = "Feb" then "February" else if [Month] = "Mar" then "March" else if [Month] = "Apr" then "April" else if [Month] = "Jun" then "June" else if [Month] = "Jul" then "July" else if [Month] = "Aug" then "August" else if [Month] = "Sep" then "September" else if [Month] = "Oct" then "October" else if [Month] = "Nov" then "November" else if [Month] = "Dec" then "December" else [Month]),
+				    #"Reordered Columns4" = Table.ReorderColumns(#"Added Custom3",{"GL Code", "GL Account", "Type", "Month", "Month 2", "Year", "Amount", "Country"}),
+				    #"Removed Columns2" = Table.RemoveColumns(#"Reordered Columns4",{"Month"}),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Removed Columns2",{{"Month 2", "Month"}}),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Renamed Columns3",{{"Year", Int64.Type}, {"Amount", Currency.Type}})
+				in
+				    #"Changed Type4"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

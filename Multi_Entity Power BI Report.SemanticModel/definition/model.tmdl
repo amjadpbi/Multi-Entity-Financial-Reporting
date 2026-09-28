@@ -1,0 +1,74 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-PK
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Errors in queries that were loaded on 06/12/2025 12:01:17 pm.
+queryGroup 'Query Errors - 06/12/2025 12:01:17 pm'
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Errors in queries that were loaded on 07/12/2025 10:42:29 am.
+queryGroup 'Query Errors - 07/12/2025 10:42:29 am'
+
+	annotation PBI_QueryGroupOrder = 1
+
+/// Errors in queries that were loaded on 07/12/2025 11:45:53 am.
+queryGroup 'Query Errors - 07/12/2025 11:45:53 am'
+
+	annotation PBI_QueryGroupOrder = 2
+
+/// Errors in queries that were loaded on 07/12/2025 11:49:14 am.
+queryGroup 'Query Errors - 07/12/2025 11:49:14 am'
+
+	annotation PBI_QueryGroupOrder = 3
+
+/// Errors in queries that were loaded on 08/12/2025 12:26:28 pm.
+queryGroup 'Query Errors - 08/12/2025 12:26:28 pm'
+
+	annotation PBI_QueryGroupOrder = 4
+
+/// Errors in queries that were loaded on 11/12/2025 2:48:18 pm.
+queryGroup 'Query Errors - 11/12/2025 2:48:18 pm'
+
+	annotation PBI_QueryGroupOrder = 5
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["UT P&L 2026","UT P&L 2025","UT Balance Sheet FY 2026","UT Balance Sheet FY 2025","US P&L FY 2026","US P&L FY 2025","US Balance Sheet FY 2026","US Balance Sheet FY 2025","UT & US Data 2025-26","_Measures","Errors in UT & US Data 2025-26","Balance Sheet","P&L","P&L (2)","BS","Map_","Errors in P&L (2)","Errors in Map","_Measuers","Errors in UT & US Data 2025-26 (2)","Errors in US P&L FY 2026","Errors in US P&L FY 2025","Errors in US Balance Sheet FY 2026","Errors in US Balance Sheet FY 2025","Errors in UT & US Data 2025-26 (3)","Errors in UT & US Data 2025-26 (4)","Map","Errors in UT & US Data 2025-26 (5)","Budget FY26","UT P&L 2026 a","US P&L FY 2026 a"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'UT P&L 2026'
+ref table 'UT P&L 2025'
+ref table 'UT Balance Sheet FY 2026'
+ref table 'UT Balance Sheet FY 2025'
+ref table 'US P&L FY 2026'
+ref table 'US P&L FY 2025'
+ref table 'US Balance Sheet FY 2026'
+ref table 'US Balance Sheet FY 2025'
+ref table 'UT & US Data 2025-26'
+ref table MONTH
+ref table 'Balance Sheet'
+ref table P&L
+ref table 'P&L (2)'
+ref table BS
+ref table _Measuers
+ref table 'Consolidated TBalance'
+ref table DateTableTemplate_c0f96948-9800-490f-9a6a-c939565107f4
+ref table LocalDateTable_160748ee-559c-46c7-922f-2f307503db54
+ref table Map
+ref table 'PnL BS & CFS Main'
+ref table 'PnL Detailed'
+ref table LocalDateTable_fbf0dd74-66b1-4dcb-a7f3-728def3904b9
+ref table 'Budget FY26'
+ref table LocalDateTable_c13b81d9-e8e4-493b-ac78-39fd6532f73d
+ref table 'UT P&L 2026 a'
+ref table 'US P&L FY 2026 a'
+ref table 'BS HL'
+
+ref cultureInfo en-US
+

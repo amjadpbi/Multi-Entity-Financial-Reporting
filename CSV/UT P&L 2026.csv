@@ -1,0 +1,459 @@
+,,,July      NY,August    NY,Total
+,PROFIT & LOSS,,,,
+,,,,,
+4000,,Hardware Sales,794494,388888,1183382
+ , , ,,,
+4010,,Turnkey Components Onsold,0,445,445
+ , , ,,,
+4018,,Sales - Third Party Products,"78,863","11,476","90,339"
+ , , ,,,
+4100,,Sales - Projects & Systems Services,"3,515","52,375","55,890"
+ , , ,,,
+4300,,Sales - RMA,"6,600","9,700","16,300"
+ , , ,,,
+4500,,Support Agreements Revenue,"94,864","96,314",191178
+ , , ,,,
+4550,,Subscriptions Revenue,"11,651","12,173","23,824"
+ , , ,,,
+4760,,omnicore Licences,"96,860",323678,420538
+ , , ,,,
+4770,,Other Licences,"2,650","13,111","15,761"
+ , , ,,,
+,,,,,
+4900,,Total Sales,"1,089,496","908,158",1997654
+,,,,,
+,,,,,
+5000,,Opening Stock - Stores,989382,883166,1872548
+ , , ,,,
+5010,,Purchases - Stores,"48,246",166191,214437
+ , , ,,,
+5020,,Closing Stock - Stores,-883166,-993058,-1876224
+ , , ,,,
+,,,,,
+5025,,Stores Purchases,"154,462","56,299",210761
+,,,,,
+5018,,Opening Stock - Third Party Products,"17,929","15,771","33,700"
+ , , ,,,
+5019,,Purchases - Third Party Products,"39,598",-138,"39,460"
+ , , ,,,
+5022,,Closing Stock - Third Party Products,"-15,771","-10,753",-26524
+ , , ,,,
+,,,,,
+5023,,Third Party Purchases,"41,755","4,880","46,635"
+,,,,,
+,,,,,
+,,,,,
+5048,,Opening Stock - SER,"1,773","1,773","3,546"
+ , , ,,,
+5052,,Closing Stock - SER,"-1,773","-1,773","-3,546"
+ , , ,,,
+,,,,,
+,,,,,
+5068,,Opening Stock - ENG,"28,249","29,054","57,303"
+ , , ,,,
+5070,,Purchases - ENG,955,-11406,-10451
+ , , ,,,
+5072,,Closing Stock - ENG,-29054,-17864,-46918
+ , , ,,,
+,,,,,
+5075,,Engineering Costs,150,-217,-67
+,,,,,
+5100,,Opening Stock - SUB Manufacturing,"218,147","233,106",451253
+ , , ,,,
+5110,,Purchases - Subcontractor Manufacturing,"14,937","-33,323",-18386
+ , , ,,,
+5120,,Closing Stock - SUB Manufacturing,-233106,-199338,-432444
+ , , ,,,
+,,,,,
+5125,,Subcontractor Manufacturing Purchases,-22,445,423
+,,,,,
+,,,,,
+,,,,,
+5260,,Purchases - RMA,354,649,"1,003"
+ , , ,,,
+5270,,Closing Stock - RMA,-333,0,-333
+ , , ,,,
+,,,,,
+5275,,RMA Loan Costs,21,649,670
+,,,,,
+5300,,Opening Stock - FCT,"29,730","55,761","85,491"
+ , , ,,,
+5310,,Purchases - Manufacturing,"26,031","95,845",121876
+ , , ,,,
+5320,,Closing Stock - FCT,-55761,-151591,-207352
+ , , ,,,
+,,,,,
+5325,,Manufacturing Costs,0,15,15
+,,,,,
+5910,,Total Stock Purchases,"196,367","62,071",258438
+,,,,,
+5812,,Support & Maintenance Services,"10,467","14,573","25,040"
+ , , ,,,
+5811,,Project Engineering Services,"3,670","8,854","12,524"
+ , , ,,,
+5813,,Subcontractors - Engineering,980,0,980
+ , , ,,,
+,,,,,
+,,,,,
+5899,,Engineering Labour Costs,"15,117","23,428","38,545"
+,,,,,
+5551,,Production Labour Recovery,"20,512","20,328","40,840"
+ , , ,,,
+,,,,,
+5265,,Freight & Customs on Sales,"2,442","1,655","4,097"
+ , , ,,,
+5266,,Freight Recovery,"-3,041",-629,"-3,670"
+ , , ,,,
+5267,,Freight to US (INC),"5,244","3,068","8,312"
+ , , ,,,
+5268,,Tariff Expenses ( USA),0,"16,762","16,762"
+ , , ,,,
+,,,,,
+5450,,Consumables - Production,145,540,685
+ , , ,,,
+5470,,Stock Variances,-15,0,15
+ , , ,,,
+5475,,Stock Disposal,0,10,-10
+ , , ,,,
+5424,,Consumables - Engineering,"-2,248","-1,704","3,952"
+ , , ,,,
+,,,,,
+5400,,Other Costs,"7,053","23,091","30,144"
+,,,,,
+,,,,,
+5930,,Total Cost of Goods Sold,"-239,048","-128,917",367965
+,,,,,
+,,,,,
+4990,,GROSS PROFIT,"850,447","779,241",-1629688
+,,,,,
+,,,,,
+,,,,,
+4980,,Total Income,-850447,-779241,-1629688
+,,,,,
+,,,,,
+6200,,Depreciation,"-5,745","-5,373","11,118"
+ , , ,,,
+6201,,Depreciation - Loan Equipment,"-1,078",-891,"1,969"
+ , , ,,,
+6203,,Software PPA amortisation expense,"-20,440","-19,121","39,561"
+ , , ,,,
+6204,,Customer relationship PPA amortisation e,382,358,740
+ , , ,,,
+6205,,Intellectual property amortisation expen,"3,041","2,844","5,885"
+ , , ,,,
+6250,,Depreciation - ROU assets,"16,248","16,248","32,496"
+ , , ,,,
+,,,,,
+6010,,Accounting Fees,-242,-242,484
+ , , ,,,
+6382,,Legal Fees,0,-386,386
+ , , ,,,
+6150,,Consultancy & Corporrate  Recharges,"-2,500",0,"2,500"
+ , , ,,,
+,,,,,
+6380,,Corporate & Legal Fees,"-2,742",-628,"3,370"
+,,,,,
+6299,,Foreign Exchange Loss / Gain,"4,786","-2,776","-2,010"
+ , , ,,,
+6031,,Bank Fees,"1,006",-211,-795
+ , , ,,,
+6034,,Interest Expense - Lease Liabilities,"2,825","2,726","5,551"
+ , , ,,,
+,,,,,
+6030,,Banking & Finance,"-2,966","5,713","2,747"
+,,,,,
+6047,,Entertainment Client,-631,-287,918
+ , , ,,,
+6048,,Entertainment Staff,"-1,090",-371,"1,461"
+ , , ,,,
+6042,,Client Gifts,-22,0,22
+ , , ,,,
+6044,,Client Training,39,0,39
+ , , ,,,
+,,,,,
+6049,,Business Development,"1,781",658,"2,439"
+,,,,,
+6315,,Motor Vehicle Insurance,-93,-93,186
+ , , ,,,
+6325,,Liability & Cyber,176,176,352
+ , , ,,,
+6330,,Marine Transit,463,463,926
+ , , ,,,
+,,,,,
+6341,,Workers Comp Insurance WA,"-3,309","-1,911","5,220"
+ , , ,,,
+6342,,Workers Comp Insurance QLD,0,-185,185
+ , , ,,,
+,,,,,
+6343,,Workers Comp Insurance,"3,309","2,096","5,405"
+,,,,,
+6351,,Business WA,356,356,712
+ , , ,,,
+,,,,,
+6353,,Business Insurance,-356,-356,712
+,,,,,
+6360,,Corporate Travel Insurance,367,367,734
+ , , ,,,
+,,,,,
+6369,,Insurance,"4,764","3,551","8,315"
+,,,,,
+6310,,Software - Engineering,"3,054","3,174","6,228"
+ , , ,,,
+6311,,Software - Finance,"2,923","1,943","4,866"
+ , , ,,,
+6320,,IT Service & Support,"3,717","2,176","5,893"
+ , , ,,,
+6322,,Internal IT Support & Network Admin,0,301,301
+ , , ,,,
+6665,,IT Equipment & Supplies,101,370,471
+ , , ,,,
+6340,,Online services & Cloud Storage,"1,787","1,787","3,574"
+ , , ,,,
+,,,,,
+6350,,IT,"11,582","9,749","21,331"
+,,,,,
+6410,,Digital & Advertising,"3,467","3,147","6,614"
+ , , ,,,
+6420,,Website,84,0,84
+ , , ,,,
+6430,,Lead Generation,29,29,58
+ , , ,,,
+6440,,Tradeshows & Events,"1,139","1,116","2,255"
+ , , ,,,
+6450,,Printing & Merchandise,91,"2,601","2,692"
+ , , ,,,
+6460,,Subscriptions & Memberships (Marketing),"1,199",386,"1,585"
+ , , ,,,
+6470,,Marketing Consultants,429,0,429
+ , , ,,,
+,,,,,
+6499,,Marketing,"6,439","7,279","13,718"
+,,,,,
+6510,,Fuel,285,341,626
+ , , ,,,
+6530,,Repairs & Maintenance MV,0,502,502
+ , , ,,,
+,,,,,
+6549,,Motor Vehicle Expenses,285,843,"1,128"
+,,,,,
+6110,,Mobile Phones,"1,111",842,"1,953"
+ , , ,,,
+,,,,,
+,,,,,
+6611,,Rent WA,"16,000","16,000","32,000"
+ , , ,,,
+6614,,Rent WA Reversal Pre IFRS,-16000,-16000,-32000
+ , , ,,,
+6621,,Property Fees & Taxes,"6,123","5,071","11,194"
+ , , ,,,
+6631,,Cleaning WA,"1,943","2,349","4,292"
+ , , ,,,
+6641,,Utilities WA,"1,444","2,000","3,444"
+ , , ,,,
+6651,,Repairs & Maintenance WA,0,608,608
+ , , ,,,
+6661,,"Office Supplies, Postage, Copier WA",628,752,"1,380"
+ , , ,,,
+6671,,Security WA,132,0,132
+ , , ,,,
+6121,,Office Phone WA,544,600,"1,144"
+ , , ,,,
+6131,,Internet WA,146,146,292
+ , , ,,,
+,,,,,
+6613,,WA Office Expenses,"10,961","11,526","22,487"
+,,,,,
+6612,,Rent QLD,"2,540","2,540","5,080"
+ , , ,,,
+,,,,,
+6623,,QLD Office Expenses,"2,540","2,540","5,080"
+,,,,,
+6300,,Courier Expense,527,207,734
+ , , ,,,
+,,,,,
+,,,,,
+6600,,Office Expenses,"15,139","15,115","30,254"
+,,,,,
+6811,,Staff Amenities WA,"1,273","3,139","4,412"
+ , , ,,,
+,,,,,
+6813,,Staff Amenities,"1,273","3,139","4,412"
+,,,,,
+6820,,Staff Events,0,"5,054","5,054"
+ , , ,,,
+6830,,Recruitment,925,"3,996","4,921"
+ , , ,,,
+6832,,Payroll & HR Consultants,"1,186","1,186","2,372"
+ , , ,,,
+6833,,Outsourced Staffing,0,"3,110","3,110"
+ , , ,,,
+6840,,Staff Gifts,0,45,45
+ , , ,,,
+6850,,Subscriptions & Memberships - Staff/Corp,0,844,844
+ , , ,,,
+6870,,Staff Training,"17,227","3,709","20,936"
+ , , ,,,
+,,,,,
+6880,,Staff Costs,"20,610","21,083","41,693"
+,,,,,
+6713,,Admin Wages,"59,008","58,968",117976
+ , , ,,,
+6714,,Admin Wages - Leave Accrual,"-3,528","3,758",230
+ , , ,,,
+6715,,Admin Wages - LSL Accrual,"4,120","6,255","10,375"
+ , , ,,,
+6716,,Admin Wages - Superannuation,"9,317","7,076","16,393"
+ , , ,,,
+,,,,,
+6718,,Admin Salaries,"68,917","76,057",144974
+,,,,,
+6723,,WA Sales Wages,"18,997","20,441","39,438"
+ , , ,,,
+6724,,WA Sales Wages - Leave Accrual,"1,221","1,968","3,189"
+ , , ,,,
+6725,,WA Sales Wages - LSL Accrual,"1,387","1,690","3,077"
+ , , ,,,
+6726,,WA Sales Wages - Superannuation,"3,883","3,127","7,010"
+ , , ,,,
+6727,,WA Sales Wages - Commissions,"8,038","6,627","14,665"
+ , , ,,,
+,,,,,
+6728,,WA Sales Salaries,"33,526","33,854","67,380"
+,,,,,
+6733,,QLD Sales Wages,"17,860","17,042","34,902"
+ , , ,,,
+6734,,QLD Sales Wages - Leave Accrual,"6,682","1,473","8,155"
+ , , ,,,
+6735,,QLD Sales Wages - LSL Accrual,540,"1,571","2,111"
+ , , ,,,
+6736,,QLD Sales Wages - Superannuation,"3,293","2,629","5,922"
+ , , ,,,
+6737,,QLD Sales Wages - Commissions,"5,025","5,534","10,559"
+ , , ,,,
+,,,,,
+6738,,QLD Sales Salaries,"33,401","28,250","61,651"
+,,,,,
+6753,,Engineering Wages,137523,137493,275016
+ , , ,,,
+6754,,Engineering Wages - Leave Accrual,-11887,"7,278","-4,609"
+ , , ,,,
+6755,,Engineering Wages - LSL Accrual,"2,276","11,973","14,249"
+ , , ,,,
+6756,,Engineering Wages - Superannuation,"21,819","16,499","38,318"
+ , , ,,,
+6758,,Engineering Wages - Recovery,-19512,-23949,-43461
+ , , ,,,
+,,,,,
+6759,,Engineering Wages,130220,149294,279514
+,,,,,
+6743,,Production Wages,"17,731","17,730","35,461"
+ , , ,,,
+6744,,Production Wages - Leave Accrual,47,852,899
+ , , ,,,
+6745,,Production Wages - LSL Accrual,-190,-382,-572
+ , , ,,,
+6746,,Production Wages - Superannuation,"2,925","2,128","5,053"
+ , , ,,,
+6748,,Production Wages Recovery,-20512,-20328,-40840
+ , , ,,,
+,,,,,
+,,,,,
+6783,,Systems/Support Wages,"52,260","54,784",107044
+ , , ,,,
+6787,,Systems After Hours Support,"1,715","2,436","4,151"
+ , , ,,,
+6784,,Systems/Support Wages - Leave Accrual,"-2,172","3,993","1,821"
+ , , ,,,
+6785,,Systems/Support Wages - LSL Accrual,976,"4,304","5,280"
+ , , ,,,
+6786,,Systems/Support Wages - Superannuation,"7,943","5,355","13,298"
+ , , ,,,
+,,,,,
+6789,,Systems/Support,"60,722","70,872",131594
+,,,,,
+6763,,Marketing Wages,"16,929","17,299","34,228"
+ , , ,,,
+6764,,Marketing Wages - Annual Leave accrued,"-1,052","1,641",589
+ , , ,,,
+6765,,Marketing Wages - LSL Accrued,"1,053","4,854","5,907"
+ , , ,,,
+6766,,Marketing Wages - Superannuation,"2,688","2,076","4,764"
+ , , ,,,
+,,,,,
+6768,,Marketing Wages,"19,616","25,870","45,486"
+,,,,,
+6772,,Global Teams Fees & Charges,"1,833","3,731","5,564"
+ , , ,,,
+6773,,Global Team Salaries,"12,702","12,666","25,368"
+ , , ,,,
+6774,,Global Leave Accrued,979,"1,222","2,201"
+ , , ,,,
+,,,,,
+6779,,Global Teams,"15,514","17,619","33,133"
+,,,,,
+,,,,,
+6791,,Payroll Tax WA,"28,470","17,735","46,205"
+ , , ,,,
+6794,,Payroll Tax SA,477,0,477
+ , , ,,,
+6792,,Payroll Tax QLD,"1,895","1,170","3,065"
+ , , ,,,
+,,,,,
+6793,,Payroll Tax,"30,843","18,905","49,748"
+,,,,,
+,,,,,
+6890,,Salaries,392757,420719,813476
+,,,,,
+6913,,Travel Allowance - Corporate,0,"1,088","1,088"
+ , , ,,,
+6923,,Flights & Accommodation - Corporate,"3,383",582,"3,965"
+ , , ,,,
+6933,,"Parking,Taxis and Car Hire - Corporate","1,204",276,"1,480"
+ , , ,,,
+6943,,Travel meals - Corporate,459,15,474
+ , , ,,,
+,,,,,
+6918,,Corporate Travel Costs,"5,046","1,960","7,006"
+,,,,,
+6926,,Flights & Accommodation - Sales,"4,423",500,"4,923"
+ , , ,,,
+6936,,"Parking, Taxis and Car Hire - Sales",25,838,863
+ , , ,,,
+6946,,Travel Meals - Sales,-104,222,118
+ , , ,,,
+,,,,,
+6928,,Sales Travel Costs,"4,344","1,560","5,904"
+,,,,,
+6917,,Travel Allowance - Engineering,0,"1,767","1,767"
+ , , ,,,
+6927,,Flights & Accommodation - Engineering,"10,247","13,897","24,144"
+ , , ,,,
+6937,,"Parking,Taxis and Car Hire - Engineering","1,289","1,376","2,665"
+ , , ,,,
+6949,,Travel Meals - Engineering,460,"1,662","2,122"
+ , , ,,,
+,,,,,
+6950,,Engineering Travel Costs,"11,996","18,702","30,698"
+,,,,,
+,,,,,
+6919,,Travel Expenses,"21,385","22,222","43,607"
+,,,,,
+,,,,,
+6990,,TOTAL EXPENSES,521451,552395,1073846
+,,,,,
+,,,,,
+7000,,NET PROFIT,-328996,-226846,-555842
+,,,,,
+,,,,,
+7010,,Net Profit Before Tax,-328996,-226846,-555842
+7020,,Less Income Tax Expense,0,166083,166083
+ , , ,,,
+,,,,,
+7030,,Net Profit After Tax,-328996,"-60,762",-389758
+,,,,,
+7050,,RETAINED PROFIT C/FWD,-328996,"-60,762",-389758
+,,,,,
+,,,,,
+16/09/2025 -  1:59:20PM,Page 0,,,,
+,,,,,
+(c) 2020 Triumph Business Systems Pty. Ltd.   www.triumph.com.au   Triumph report design (glrpcr.rpt),,,,,

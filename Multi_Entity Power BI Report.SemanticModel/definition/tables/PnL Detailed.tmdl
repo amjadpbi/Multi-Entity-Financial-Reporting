@@ -1,0 +1,266 @@
+table 'PnL Detailed'
+	lineageTag: 1edd73e6-6ced-49cd-bd12-3e194a74a8fd
+
+	column Index
+		formatString: 0
+		lineageTag: f0d08ab3-2d81-4650-bd82-abcd40dd36f6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Index]
+
+		annotation SummarizationSetBy = User
+
+	column Explain
+		lineageTag: e6525d25-74d0-4d88-b2b7-e0f774ab990c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Explain]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account
+		lineageTag: 21084d91-ca56-429b-b8e1-91c008c04cd9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Account]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH
+		lineageTag: b357e508-2937-40ab-9696-78d318fa1675
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: MONTH[MONTH]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Actual =
+			IF(ISBLANK(CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26','UT & US Data 2025-26'[Month] = 'PnL Detailed'[MONTH] &&
+			'UT & US Data 2025-26'[BS HL] = 'PnL Detailed'[Account] &&
+			'UT & US Data 2025-26'[Year] = 2026
+			)
+			)),0,
+			CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26','UT & US Data 2025-26'[Month] = 'PnL Detailed'[MONTH] &&
+			'UT & US Data 2025-26'[BS HL] = 'PnL Detailed'[Account] &&
+			'UT & US Data 2025-26'[Year] = 2026
+			)
+			))
+		formatString: #,0.00
+		lineageTag: be8f19db-5c1a-4f22-a3c5-488bb53e7497
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual Final' = ```
+			
+			SWITCH(
+			    TRUE(),
+			
+			    /* ---------------- ASSETS ---------------- */
+			
+			    -- F (1 to 8)
+			    'PnL Detailed'[Index] = 9 ,
+			        CALCULATE(
+			            SUM('PnL Detailed'[Actual]),
+			            FILTER(
+			                'PnL Detailed',
+			                'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                'PnL Detailed'[Index] IN {1,2,3,4,5,6,7,8}
+			            )
+			        ),
+			
+			    -- F (10 to 12)
+			    'PnL Detailed'[Index] = 13 ,
+			        CALCULATE(
+			            SUM('PnL Detailed'[Actual]),
+			            FILTER(
+			                'PnL Detailed',
+			                'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                'PnL Detailed'[Index] IN {10,11,12}
+			            )
+			        ),
+			
+			    -- 1 to 8 and 10 to 12 (Total Assets)
+			    'PnL Detailed'[Index] = 14 ,
+			        CALCULATE(
+			            SUM('PnL Detailed'[Actual]),
+			            FILTER('PnL Detailed',
+			                'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                'PnL Detailed'[Index] IN {1,2,3,4,5,6,7,8,10,11,12}
+			            )
+			        ),
+			
+			    /* ---------------- CURRENT LIABILITIES ---------------- */
+			
+			    -- F (15 to 20)
+			    'PnL Detailed'[Index] = 21 ,
+			        CALCULATE(
+			            SUM('PnL Detailed'[Actual]),
+			            FILTER(
+			                'PnL Detailed',
+			                'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                'PnL Detailed'[Index] IN {15,16,17,18,19,20}
+			            )
+			        ),
+			
+			    /* ---------------- NON-CURRENT LIABILITIES ---------------- */
+			
+			    -- F (22 to 24)
+			    'PnL Detailed'[Index] = 25 ,
+			        CALCULATE(
+			            SUM('PnL Detailed'[Actual]),
+			            FILTER(
+			                'PnL Detailed',
+			                'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                'PnL Detailed'[Index] IN {22,23,24}
+			            )
+			        ),
+			
+			    /* ---------------- TOTAL LIABILITIES ---------------- */
+			
+			    -- F (15 to 20 and 22 to 24)
+			    'PnL Detailed'[Index] = 26 ,
+			        CALCULATE(
+			            SUM('PnL Detailed'[Actual]),
+			            FILTER(
+			                'PnL Detailed',
+			                'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                'PnL Detailed'[Index] IN {15,16,17,18,19,20,22,23,24}
+			            )
+			        ),
+			
+			    /* ---------------- NET ASSETS ---------------- */
+			
+			    -- 1–8 + 10–12 – 15–20 – 22–24
+			    'PnL Detailed'[Index] = 27 ,
+			        VAR Assets =
+			            CALCULATE(
+			                SUM('PnL Detailed'[Actual]),
+			                FILTER('PnL Detailed',
+			                    'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                    'PnL Detailed'[Index] IN {1,2,3,4,5,6,7,8,10,11,12}
+			                )
+			            )
+			        VAR Liabilities =
+			            CALCULATE(
+			                SUM('PnL Detailed'[Actual]),
+			                FILTER('PnL Detailed',
+			                    'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                    'PnL Detailed'[Index] IN {15,16,17,18,19,20,22,23,24}
+			                )
+			            )
+			        RETURN Assets - Liabilities,
+			
+			    /* ---------------- NET WORKING CAPITAL ---------------- */
+			
+			    -- (2–8) – (15–20)
+			    'PnL Detailed'[Index] = 28 ,
+			        VAR A_2_8 =
+			            CALCULATE(
+			                SUM('PnL Detailed'[Actual]),
+			                FILTER('PnL Detailed',
+			                    'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                    'PnL Detailed'[Index] IN {2,3,4,5,6,7,8}
+			                )
+			            )
+			        VAR L_15_20 =
+			            CALCULATE(
+			                SUM('PnL Detailed'[Actual]),
+			                FILTER('PnL Detailed',
+			                    'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                    'PnL Detailed'[Index] IN {15,16,17,18,19,20}
+			                )
+			            )
+			        RETURN A_2_8 - L_15_20,
+			
+			    /* ---------------- NET ASSETS DUPLICATE ---------------- */
+			
+			    'PnL Detailed'[Index] = 29 ,
+			        VAR Assets2 =
+			            CALCULATE(
+			                SUM('PnL Detailed'[Actual]),
+			                FILTER('PnL Detailed',
+			                    'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                    'PnL Detailed'[Index] IN {1,2,3,4,5,6,7,8,10,11,12}
+			                )
+			            )
+			        VAR Liabilities2 =
+			            CALCULATE(
+			                SUM('PnL Detailed'[Actual]),
+			                FILTER('PnL Detailed',
+			                    'PnL Detailed'[MONTH] = EARLIER('PnL Detailed'[MONTH]) &&
+			                    'PnL Detailed'[Index] IN {15,16,17,18,19,20,22,23,24}
+			                )
+			            )
+			        RETURN Assets2 - Liabilities2,
+			
+			    /* ---------------- DEFAULT: row Actual ---------------- */
+			
+			    'PnL Detailed'[Actual]
+			)
+			
+			```
+		formatString: #,0.00
+		lineageTag: 9552308a-c469-481a-981a-eb0a46fc7f29
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'PnL Detailed' = calculated
+		mode: import
+		source = ```
+				
+				CROSSJOIN(
+				DATATABLE(
+				    "Index", INTEGER,
+				    "Explain",STRING,
+				    "Account",STRING,
+				    {
+				        {1, "Unrestricted Cash on Hand & at Banks", "Unrestricted Cash on Hand & at Banks"},
+				        {2, "Account Receivables - Non-Retention ", "Account Receivables - Non-Retention"},
+				        {3, "Inventory" , "Inventory"},
+				        {4, "Deposits", "Deposits"},
+				        {5, "Other Receiveable", "Other Receiveable"},
+				        {6, "Prepayments", "Prepayments"},
+				        {7, "Amount Due From Related Companies", "Amount Due From Related Companies"},
+				        {8, "Security Deposit", "Security Deposit"},
+				        {9, "F (1 to 8)" , "Current Asset"},
+				        {10, "Fixed assets", "Fixed assets"},
+				        {11, "Intangible assets", "Intangible assets"},
+				        {12, "Loan to Associated Companies & JVs", "Loan to Associated Companies & JVs"},
+				        {13, "F 10 to 12", "Non Current Asset"},
+				        {14, "1 to 8 and 10 to 12" , "Total Assets"},
+				        {15, "Trade and other Payable", "Trade and other debtors"}, 
+				        {16, "Deferred Income", "Deferred Income"},
+				        {17, "Customers' Deposits", "Customers' Deposits"}, 
+				        {18, "Insurance Funding", "Insurance Funding"}, 
+				        {19, "Provisions Employee benefits", "Employee benefits"},
+				        {20, "Current Lease liability", "Lease liability"}, 
+				        {21, "F 15 to 20", "Current liability"}, 
+				        {22, "Amount Due Loans - related companies", "Loans - related companies"}, 
+				        {23, "Amount due to previous owners" , "Loans - previous owners"}, 
+				        {24, "Non-Current Lease liabilities","Lease liability Inclding Other Long Term Liability (LSL)"}, 
+				        {25,"F	22 to 24","Non-Current Liabilities"},
+				        {26,"F	15 to 20 and 22 to 24","Total Liabilities"},
+				        {27,"F	1 to 8 and 10 to 12 and 15 to 20 and 22 to 24","Net Assets / (Liabilities)"},
+				        {28,"F	2 to 8 and 15 to 20","Net working capital"},
+				        {29,"Net Assets F 1 to 8 and 10 to 12 and 15 to 20 and 22 to 24","Net Assets / Liabilities"},
+				        {30,"A1",	"Checks1"},
+				        {31,"A2","Cash Flow from Operating"},
+				        {32,"A3","Cash Flow from Investing"},
+				        {33,"A4","Cash Flow from Financing"},
+				        {34,"A5","Beginning cash"},
+				        {35,"A6","Cash Balance"},
+				        {36,"A7","LTM ave cash balance"},
+				        {37,"A8","Net Foreign Exchange Difference"},
+				        {38,"A9","Checks"}
+				    }
+				),
+				DISTINCT('MONTH'[MONTH])
+				)
+				```
+
+	annotation PBI_Id = 3747f5ab5e80473fa1df67df3c537771
+

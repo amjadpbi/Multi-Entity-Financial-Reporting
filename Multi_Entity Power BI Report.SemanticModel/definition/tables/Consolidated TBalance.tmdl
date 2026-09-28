@@ -1,0 +1,60 @@
+table 'Consolidated TBalance'
+	lineageTag: 03053d8a-2aa6-4152-a22f-fb614f2e9020
+
+	column 'Consolidation (Trial Balance)'
+		lineageTag: a82777c7-eb8d-4861-9f04-69813f52e17a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Map[Consolidation (Trial Balance)]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GL Account #'
+		formatString: 0
+		lineageTag: e8fcdeec-3f61-44fc-9bc7-fade1c9f58e7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Map[GL Account #]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH
+		lineageTag: 67b9ea9b-4e71-44de-bbcf-5c85d743e90f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: MONTH[MONTH]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		lineageTag: 1a44c7ac-abbd-453f-81c2-2caf098d9e97
+		summarizeBy: none
+		sourceColumn: Map[Type.1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		lineageTag: ddfcb449-7371-4da9-b2e6-297b459f4e7d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Map[Country]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Consolidated TBalance' = calculated
+		mode: import
+		source =
+				
+				CROSSJOIN(
+				FILTER(
+				    SUMMARIZECOLUMNS(Map[Consolidation (Trial Balance)],Map[GL Account #], Map[Country], Map[Type.1]),
+				    NOT(ISBLANK(Map[Consolidation (Trial Balance)])) &&
+				    NOT(ISBLANK(Map[GL Account #]))
+				    ),
+				    FILTER(DISTINCT('MONTH'[MONTH]),
+				    NOT(ISBLANK('MONTH'[MONTH]))
+				    )
+				    )
+
+	annotation PBI_Id = 41760580eb1c4138aee50a6125929950
+

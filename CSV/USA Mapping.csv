@@ -1,0 +1,241 @@
+,,,,PLESE USE THIS FOR DECK,,PLESE USE THIS for Actual vs BUDGET,PLESE USE THIS FOR DECK FOR REVENUE AND COGS ,HEAD OFFICE MAPPING,HEAD OFFICE MAPPING
+Account #,Account Description,Type,old mapping,OMNITRONICS DECK MAPPING for P&L, SWC old upload  ,SC FS Mapping,Sub-Mapping for COGS,NS Acc #,NS Acc name
+10000,Sales,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,9-000-99-9-005,Celigo Inactive Mapping Accounts
+10001,Sales:RoIP Products,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,9-000-99-9-005,Celigo Inactive Mapping Accounts
+10002,Sales:Bridge Products,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,9-000-99-9-005,Celigo Inactive Mapping Accounts
+10003,Sales:900 Series Interfaces,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,9-000-99-9-005,Celigo Inactive Mapping Accounts
+10004,Sales:960 Handsets & Consoles,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,9-000-99-9-005,Celigo Inactive Mapping Accounts
+10005,Sales:950 Radio Management System,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,4-016-03-1-001,OM016 - Hardware revenue - Production
+10006,Sales:950 Radio Management System II,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,4-016-03-1-001,OM016 - Hardware revenue - Production
+10007,Sales:DX SERIES DIGITAL RADIO,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,4-016-03-1-001,OM016 - Hardware revenue - Production
+10020,Hardware Sales,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,4-016-03-1-001,OM016 - Hardware revenue - Production
+10008,Sales:Support & Maintenance,Income,Maintenance services,Revenue USA," 1,001,005 ",Maintenance services,Maintenance services,4-016-05-1-001,OM016 - SMA revenue
+10009,Sales:Services,Income,Support services,Revenue USA," 1,001,006 ",Support services,Support services,4-016-02-3-001,OM016 - Engineering project & system service revenue
+10010,Sales:RediTALK,Income,License fees,Revenue USA," 1,001,004 ",Software & License fees,License fees,4-016-04-3-998,OM016 - Other perpetual license revenue
+10011,Sales:omnigate,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,4-016-03-1-001,OM016 - Hardware revenue - Production
+10013,Sales:AGPS,Income,License fees,Revenue USA," 1,001,004 ",License fees,License fees,4-016-04-3-998,OM016 - Other perpetual license revenue
+10019,Sales:Miscellaneous Item Sales,Income,Third Party Sales,Revenue USA," 1,001,003 ",Third Party Sales,Third Party Products,4-016-03-4-001,OM016 - Hardware revenue - 3rdPTY product
+10070,RMA Sales,Income,Maintenance services,Revenue USA," 1,001,005 ",Maintenance services,Maintenance services,4-016-03-2-001,OM016 - Hardware revenue - Production RMA
+10050,Sales:omnicore Sales,Income,License fees,Revenue USA," 1,001,004 ",Software & License fees,License fees,4-016-04-3-001,OM016 - Omnicore perpetual license revenue
+10199,Sales:Sales Discounts,Income,Hardware sales,Revenue USA," 1,001,003 ",Hardware sales,Hardware sales,4-016-03-1-001,OM016 - Hardware revenue - Production
+10599,Loan items for return,Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-06-1-001,OM016 - Other revenue
+10700,Freight Recovery,Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-06-1-001,OM016 - Other revenue
+12000,Restocking Fees,Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-06-1-001,OM016 - Other revenue
+12100,Exchange/Repair Items,Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-03-1-001,OM016 - Hardware revenue - Production
+19998,Unapplied Cash Payment Income,Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-06-1-001,OM016 - Other revenue
+19999,Uncategorized Income,Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-06-1-001,OM016 - Other revenue
+21100,Direct Deposit Liabilities,Other Current Liabilities,Other Payables,#N/A," 2,410,102 ",Other payables,,2-000-05-1-001,Customer deposit
+21105,Deposits Received,Other Current Liabilities,Customers' Deposits,0," 2,410,105 ",Customers' Deposits,,2-000-05-1-001,Customer deposit
+21106,SMA Income in Advance,Other Current Liabilities,Deferred Income,0," 2,410,010 ",Deferred Income,,2-000-04-1-003,Maintenance service deferred revenue
+24000,Payroll Liabilities,Other Current Liabilities,Other Payables,0," 2,410,102 ",Wages payables,,2-000-07-1-998,Other employee benefit payable
+24001,Payroll Liabilities:RI Income Tax,Other Current Liabilities,Tax Payables,0," 2,410,020 ",Tax Payables,,2-000-07-1-998,Other employee benefit payable
+24002,Payroll Liabilities:FL Department of Revenue Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24003,Payroll Liabilities:MS Income Tax,Other Current Liabilities,Tax Payables,0," 2,410,020 ",Tax Payables,,2-000-07-1-998,Other employee benefit payable
+24004,Payroll Liabilities:MS Unemployment Tax,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24005,Payroll Liabilities:VA Income Tax,Other Current Liabilities,Tax Payables,0," 2,410,020 ",Tax Payables,,2-000-07-1-998,Other employee benefit payable
+24007,Payroll Liabilities:VA SUI Employer,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24008,Payroll Liabilities:IL Income Tax,Other Current Liabilities,Tax Payables,0," 2,410,020 ",Tax Payables,,2-000-07-1-998,Other employee benefit payable
+24009,Payroll Liabilities:IL Unemployment Tax,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24010,24010LAIncomeTax,Other Current Liabilities,Tax Payables,0," 2,410,020 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24011,24011LAUnemploymentTax,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24050,Payroll Liabilities:MetLife,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24100,Payroll Liabilities:Federal payroll liability,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24200,Payroll Liabilities:State SUI Payroll,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24300,Payroll Liabilities:Health Insurance-1,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-998,Other employee benefit payable
+24499,Payroll Liabilities:Direct Deposit Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-07-1-999,Payroll clearing
+24500,Payroll Liabilities:Payroll Accrual,Other Current Liabilities,Other Payables,0," 2,410,102 ",Wages payables,,2-000-07-1-998,Other employee benefit payable
+24550,Payroll Liabilities:Commissions Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Wages payables,,2-000-07-1-002,Commission payable
+25500,Sales Tax Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25501,Sales Tax Payable:Florida Department of Revenue Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25502,Sales Tax Payable:Boston Payable,Other Current Liabilities,Other Payables,#N/A," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25503,Sales Tax Payable:NC Department of Revenue Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25504,Sales Tax Payable:Indiana Department of Revenue Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25505,Sales Tax Payable:New York State Department of Tax & Finance Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25506,Sales Tax Payable:Ohio Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25507,Sales Tax Payable:Arkansas Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25508,Sales Tax Payable:State of North Carolina Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25509,Sales Tax Payable:WA Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25510,Sales Tax Payable:Rhode Island Department of Revenue Payable,Other Current Liabilities,Other Payables,#N/A," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25511,25511CaliforniaDepartmentofTaxandFeeAdministrationPayable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-06-1-004,VAT payable - US
+25512,25512NEWJERSEYDIVISIONOFREVENUEPayable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-06-1-004,VAT payable - US
+25513,25513WyomingDepartmentofRevenuePayable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Other payables,,2-000-06-1-004,VAT payable - US
+25520,Sales Tax Payable:Out Of Scope Agency Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25530,Sales Tax Payable:Sales Tax Agency Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25540,Sales Tax Payable:Reseller Payable,Other Current Liabilities,Other Payables,0," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+25550,Sales Tax Payable:Argentinia Payable,Other Current Liabilities,Other Payables,#N/A," 2,410,102 ",Value-added tax payable,,2-000-06-1-004,VAT payable - US
+26000,Income Tax Payable,Other Current Liabilities,Other Payables,#N/A," 2,410,102 ",Income Tax Payable,,2-000-09-1-004,Income tax payable - US
+25700,Accrued Expenses,Other Current Liabilities,Accrued Expenses,0," 2,410,103 ",Accrued expenses,,2-000-03-1-001,Trade accrued expense
+28000,Loan - Omnitronics Australia,Other Current Liabilities,Loan to Associated Companies & JVs,0," 2,220,010 ",Amount Due to Related Companies,,2-000-06-9-888,Intercompany payable clearing
+30000,Opening Balance Equity,Equity,Retained Earnings,0," 2,610,000 ",Retained Earnings,,3-000-02-1-001,Retained earnings
+31400,Shareholder Distributions,Equity,Retained Earnings,#N/A," 2,610,000 ",Retained Earnings,,3-000-03-1-001,Dividend declared to shareholder
+39000,Capital Stock,Equity,Ordinary Issued Share Capital,0," 2,610,010 ",Share Capital,,3-000-01-1-001,Fully paid ordinary share at par value
+39100,Dividends Paid,Equity,Share Premium,#N/A," 2,610,020 ",Retained Earnings,,3-000-02-1-001,Retained earnings
+39200,Retained Earnings,Equity,Retained Earnings,0," 2,610,000 ",Retained Earnings,,3-000-02-1-001,Retained earnings
+40001,Cost of Goods Sold,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+40009,40009 Project Services,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Engineering Services,5-000-02-9-001,Other consulting and support COGS
+40011,Cost of Goods Sold:omnigate COGS,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+40020,Hardware COGS,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+40050,Cost of Goods Sold:omnicore Dispatch,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Software & License fees,5-000-04-1-001,License fee COGS license agreement
+40070,40070 RMA COGS,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Maintenance Services,5-000-03-3-001,Hardware COGS - Production RMA purchase
+41001,Cost of Goods Sold:RoIP Products,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+41002,Cost of Goods Sold:Bridge Products,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+41003,Cost of Goods Sold:900 Series Interfaces,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+41004,Cost of Goods Sold:960 Handsets & Consoles,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+41005,Cost of Goods Sold:950 Radio Management System,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+41006,Cost of Goods Sold:950 Radio Management System II,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+41007,Cost of Goods Sold:DX SERIES DIGITAL RADIO,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-03-1-001,Hardware COGS - Production purchase
+41008,Cost of Goods Sold:Misc Parts and Equipment,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Third Party Products,5-000-03-2-001,Hardware COGS - 3rdPTY product purchase
+41010,Cost of Goods Sold:RediTALK Console GUI,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Software & License fees,5-000-04-1-001,License fee COGS license agreement
+41013,Cost of Goods Sold:AGPS COG,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Hardware,5-000-04-1-001,License fee COGS license agreement
+41090,Inventory Shrinkage,Cost of Goods Sold,COGS - Other Costs,COGS," 1,013,003 ",COGS - Write Down of Inventories,Factory Overheads,5-000-03-1-004,Hardware COGS - Production inventory write-down
+41091,  Inventory Damage/ Loss,Cost of Goods Sold,COGS - Other Costs,COGS," 1,013,003 ",COGS - Direct Costs,Factory Overheads,5-000-03-1-998,Hardware COGS - Production other cost
+41099,Loan System to be returned (Cost),Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,Factory Overheads,5-000-03-2-998,Hardware COGS - 3rdPTY product other cost
+41100,Freight charges,Cost of Goods Sold,COGS - Other Costs,COGS," 1,013,003 ",COGS - Other Costs,Factory Overheads,5-000-03-1-003,Hardware COGS - Production freight
+42100,Exchange/Repair COGS,Cost of Goods Sold,COGS - Other Costs,COGS," 1,013,003 ",COGS - Other Costs,Factory Overheads,5-000-03-1-998,Hardware COGS - Production other cost
+45000,Services & Support,Cost of Goods Sold,COGS - Direct Costs,COGS," 1,013,001 ",COGS - Direct Costs,COGS-Maintenance Services,5-000-05-9-001,Other maintenance service COGS
+11100,Inventory Revaluation Expense,Cost of Goods Sold,COGS - Other Costs,COGS," 2,113,030 ",Allowance for inventory write-down,Factory Overheads,5-000-03-1-004,Hardware COGS - Production inventory write-down
+60000,Marketing,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Marketing & Market Research,,6-000-01-1-998,Other advertising and marketing expense
+60010,Marketing:Advertising & Promotions,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Marketing & Market Research,,6-000-01-1-004,Promotion expense
+60020,Marketing:Trade Shows,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Marketing & Market Research,,6-000-01-1-010,Tradeshow & event expense
+60025,Marketing:Printing & Merchandise,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Marketing & Market Research,,6-000-01-1-003,Prints and merchandise expense
+60100,Motor Vehicle Expenses,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-11-2-004,Other motor vehicle expense
+60400,Bank Service Charges,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-7-001,Bank fee expense
+60401,Bank Service Charges:Merchant Account Fees,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-7-001,Bank fee expense
+60402,Bank Service Charges:Interest Expense,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-7-001,Bank fee expense
+60403,Bank Service Charges:Payroll Processing Fees,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-7-001,Bank fee expense
+60500,Bad Debts Written Off,Expenses,General Administrative,Other opex," 1,201,100 ",ECL Expense,,6-000-11-3-003,Bad debt write-off expense
+60501,Bad Debt Expense,Expenses,General Administrative,Other opex," 1,201,100 ",ECL Expense,,6-000-11-3-001,Bad debt provision expense
+61000,Business Licenses and Permits,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-5-003,Annual filing fee expense
+61700,Computer and Internet Expenses,Expenses,General Administrative,Other opex," 1,201,100 ",Software expenses,,6-000-08-1-005,IT low value asset <$1000 expense
+61800,Software Expense,Expenses,General Administrative,Other opex," 1,201,100 ",Software expenses,,6-000-08-1-004,Software dues and subscription expense
+62000,Reseller Training Expenses,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-01-1-010,Tradeshow & event expense
+62001,Accounting Fees,Expenses,Professional Services,Other opex," 1,201,080 ",Accounting expense,,#N/A,#N/A
+62002,Corporate & Legal Fees,Expenses,Professional Services,Other opex," 1,201,080 ",Legal expense,,6-000-06-1-001,HR consulting fee expense
+62003,Marketing & Tradeshows,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Marketing & Market Research,,#N/A,#N/A
+62004,Tradeshow storage & logistics,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Marketing & Market Research,,#N/A,#N/A
+67501,US Office,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,#N/A,#N/A
+67502,US Support consultant,Expenses,Professional Services,Other opex," 1,201,080 ",Other professional services,,#N/A,#N/A
+68201,BusinessDevelopment,Expenses,General Administrative,Other opex," 1,201,100 ",Entertainment,,#N/A,#N/A
+62100,Seminars & Training,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-9-009,Employee training expense
+62400,Depreciation Expense,Expenses,SGA - Depreciation,D&A," 1,201,000 ",Depreciation expense,,9-000-03-1-006,Other fixed asset depreciation expense
+62500,Dues and Subscriptions,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-08-1-004,Software dues and subscription expense
+63300,Insurance Expense,Expenses,General Administrative,Other opex," 1,201,100 ",Insurance,,6-000-03-1-998,Other insurance expense
+63310,Insurance Expense:General Liability Insurance,Expenses,General Administrative,Other opex," 1,201,100 ",Insurance,,6-000-03-1-001,Business insurance expense
+63320,Insurance Expense:Motor Vehicle Insurance,Expenses,General Administrative,Other opex," 1,201,100 ",Insurance,,6-000-03-1-005,Motor vehicle insurance expense
+63330,Insurance Expense:Life and Disability Insurance,Expenses,General Administrative,Other opex," 1,201,100 ",Insurance,,6-000-03-1-998,Other insurance expense
+63360,Insurance Expense:Worker's Compensation,Expenses,Staff Cost,Other opex," 1,201,030 ",Other Employee Expenses,,6-000-02-6-998,Workers compensation expense - ROW
+63370,PropertyInsurance,Expenses,General Administrative,Other opex," 1,201,100 ",Insurance,,6-000-03-1-008,Property insurance expense
+64500,Entertainment,Expenses,General Administrative,Other opex," 1,201,100 ",Entertainment,,6-000-10-1-998,Other client entertainment expense
+64510,Entertainment:Client Entertainment - Local,Expenses,Advertising & Promotion,Other opex," 1,201,070 ",Entertainment,,6-000-10-1-998,Other client entertainment expense
+64520,Entertainment:Staff Entertainment-100% Dedu,Expenses,Staff Cost,Other opex," 1,201,030 ",Entertainment,,6-000-02-9-014,Other employee entertainment expense
+64700,Miscellaneous Expense,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-01-1-998,Other advertising and marketing expense
+64800,Test Equipment,Expenses,COGS - Other Costs,COGS," 1,013,003 ",COGS - Other Costs,,6-000-08-1-005,IT low value asset <$1000 expense
+65000,Taxes Paid,Expenses,Taxes,Tax," 1,510,010 ",Income tax expense,,9-000-49-1-001,Income tax expense - current
+65050,Taxes Paid:Federal Corporate Tax,Expenses,Taxes,Tax," 1,510,010 ",Income tax expense,,9-000-49-1-001,Income tax expense - current
+65100,Taxes Paid:Florida Corporate Tax,Expenses,Taxes,Tax," 1,510,010 ",Income tax expense,,9-000-49-1-001,Income tax expense - current
+65150,Taxes Paid:Foreign tax paid,Expenses,Taxes,Tax," 1,510,010 ",Income tax expense,,9-000-49-1-001,Income tax expense - current
+65199,Taxes Paid:Miscellaneous Tax,Expenses,Taxes,Tax," 1,510,010 ",Income tax expense,,9-000-49-1-001,Income tax expense - current
+65701,Taxes Paid:Sales and Use Tax Florida,Expenses,Taxes,Tax," 1,510,010 ",Income tax expense,,9-000-49-1-001,Income tax expense - current
+66700,Professional Fees,Expenses,Professional Services,Other opex," 1,201,080 ",Other professional services,,6-000-05-1-998,Other professional fee expense
+66800,Payroll Related Expenses,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-9-998,Other employee expense
+66801,Payroll Related Expenses:Salaries & Wages,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-1-001,Employee gross wage expense
+66802,Payroll Related Expenses:Bonus,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-2-001,Employee STI expense
+66803,Payroll Related Expenses:Paid Time Off,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-1-001,Employee gross wage expense
+66804,Payroll Related Expenses:In Lieu of Notice,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-1-004,Employee one-off payment expense
+66805,Payroll Related Expenses:Relocation Expenses,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-9-008,Employee relocation expense
+66806,Payroll Related Expenses:Commissions Paid,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-1-003,Employee commission expense
+66810,Payroll Related Expenses:Subcontractors,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Wages and salaries,,6-000-02-4-001,Contractor fee expense
+66820,Payroll Related Expenses:Payroll Taxes,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66827,Payroll Related Expenses:Payroll Taxes:FL State Unemployment Tax,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66828,Payroll Related Expenses:Payroll Taxes:NC Unemployment SUI,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66831,Payroll Related Expenses:Payroll Taxes:FICA Taxes,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66832,Payroll Related Expenses:Payroll Taxes:RI SUI,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66833,Payroll Related Expenses:Payroll Taxes:RI Employment Taxes,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66834,Payroll Related Expenses:Payroll Taxes:RI Income Tax,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66835,Payroll Related Expenses:Payroll Taxes:NC Witholding,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66840,Payroll Related Expenses:Payroll Taxes:Federal Payroll Taxes,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-7-998,Payroll tax expense - ROW
+66850,Payroll Related Expenses:Health Insurance,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-9-003,Employee insurance expense
+66860,Payroll Related Expenses:Vacation expense accrued,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-3-001,Annual leave expense
+66880,Payroll Related Expenses:Staff Gifts,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-9-998,Other employee expense
+66899,Payroll Related Expenses:Payroll Clearing Account,Expenses,Staff Cost,Staff Cost," 1,201,030 ",Other Employee Expenses,,6-000-02-1-999,Employee benefit expense clearing
+66900,Reconciliation Discrepancies,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-8-998,Other G&A expense
+67100,Office Expenses,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-1-006,Other office expense
+67103,Office Expenses:Office Utilities,Expenses,General Administrative,Other opex," 1,201,100 ",Utilities,,6-000-04-1-998,Other utility expense
+67105,Office Expenses:Office Rental,Expenses,Rental,Other opex," 1,201,040 ",Rental,,6-000-04-2-001,Office rent expense
+67110,Office Expenses:Stationery & Office Consumables,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-1-005,Stationery and office consumable expense
+67120,Office Expenses:Postage and Delivery,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-1-004,Postage expense
+67200,Repairs & Maintenance of Equip,Expenses,Maintenance & Upkeep,Other opex," 1,201,090 ",Repairs and maintenance,,6-000-04-2-998,Other occupancy expense
+67500,Office Expenses:Telephone/Communication Expense,Expenses,Utilities,Other opex," 1,201,050 ",Utilities,,6-000-08-2-001,Phone expense
+68200,US Support & Warehouse,Expenses,Rental,Other opex," 1,201,040 ",Rental,,6-000-04-2-004,Warehouse rent expense
+68400,Travel,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-09-1-998,Other travel expense - Domestic
+68405,Travel:Travel - Business Development,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-09-1-998,Other travel expense - Domestic
+68410,Travel:Travel - Business Development:Accommodation - Business Development,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-09-1-001,Accommodation expense - Domestic
+68415,Travel:Travel - Business Development:Flights - Business Development,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-09-1-002,Flight expense - Domestic
+68420,Travel:Travel - Business Development:Meals and Entertainment - Business Development,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-10-1-002,BD - lunch and dinner expense
+68421,Travel:Travel - Business Development:Per Diems / Travel Allowance,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-09-1-003,Ground travel expense - Domestic
+68450,Travel:Travel - Business Development:Taxis & Car Rental - Business Development,Expenses,General Administrative,Other opex," 1,201,100 ",Travel,,6-000-09-1-003,Ground travel expense - Domestic
+68460,Travel:Trade Shows Travel,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Travel,,6-000-09-1-998,Other travel expense - Domestic
+68465,Travel:Trade Shows Travel:Flights - Trade Shows,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Travel,,6-000-09-1-002,Flight expense - Domestic
+68470,Travel:Trade Shows Travel:Accommodation - Trade Shows,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Travel,,6-000-09-1-001,Accommodation expense - Domestic
+68472,Travel:Trade Shows Travel:Meals & Entertainment - Trade Shows,Expenses,Marketing & Market Research,Advertising & Marketing," 1,201,060 ",Travel,,6-000-09-2-004,Per diem food and drink expense - International
+68475,Travel:Trade Shows Travel:Taxis & Car Rental - Trade Shows,Expenses,Marketing & Market Research,Other opex," 1,201,060 ",Travel,,6-000-09-1-003,Ground travel expense - Domestic
+69800,Uncategorized Expense,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-8-998,Other G&A expense
+69900,Sales & Marketing Services-Recovery,Expenses,Others,Other opex," 1,300,150 ",Others,,6-000-01-1-998,Other advertising and marketing expense
+69999,Unapplied Cash Bill Payment Expense,Expenses,General Administrative,Other opex," 1,201,100 ",Other Expenses,,6-000-11-8-998,Other G&A expense
+70000,Finance Charge Income,Other Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-06-1-001,OM016 - Other revenue
+70200,Interest Income,Other Income,Interest Income,Revenue USA," 1,430,001 ",Interest Income - External,,9-000-07-1-001,Interest Income - cash at bank
+70220,Other Income,Other Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,8-000-09-1-998,Other miscellaneous income
+70300,Bank Service Charges:Bounced Check Fee,Expenses,General Administrative,Revenue USA," 1,201,100 ",Other Expenses,,6-000-11-7-001,Bank fee expense
+77000,Exchange Gain or Loss,Other Expense,Trade Forex Gain/(Losses),Other opex," 1,300,110 ",Trade Forex Gain/(Losses),,9-000-01-1-001,Unrealised FX gain or loss
+91000,Perth Clearing Acccount,Bank,Unrestricted Cash on Hand & at Banks,0," 2,110,020 ",Cash at bank,,1-016-01-2-003,OM016 - Cash at bank clearing
+91100,Bank of America Savings - 6745,Bank,Unrestricted Cash on Hand & at Banks,0," 2,110,020 ",Cash at bank,,1-016-01-2-004,OM016 - BOFA USD Savings (6745)
+91200,Bank of America Checking - 5640,Bank,Unrestricted Cash on Hand & at Banks,0," 2,110,020 ",Cash at bank,,1-016-01-2-005,OM016 - BOFA USD Checking (5640)
+91201,BoA Debit Account - 8086,Bank,Unrestricted Cash on Hand & at Banks,0," 2,110,020 ",Cash at bank,,1-016-01-2-006,OM016 - BOFA USD Debit (8086)
+91300,91300AirwallexUSD,Bank,Unrestricted Cash on Hand & at Banks,0," 2,110,020 ",Cash at bank,,1-016-01-2-007,OM016 - AWX USD
+91400,Petty Cash,Bank,Unrestricted Cash on Hand & at Banks,0," 2,110,020 ",Cash on hand,,1-016-01-1-001,OM016 - Petty cash
+91500,Undeposited Funds,Other Current Assets,Unrestricted Cash on Hand & at Banks,0," 2,110,020 ",Cash on hand,,1-000-05-9-999,Undeposited funds - clearing
+91700,Accounts Receivable,Accounts receivable (A/R),Account Receivables - Non-Retention,0," 2,112,020 ",Trade receivables,,1-000-02-1-001,Accounts receivable
+91701,Allowance for Doubtful Accounts,Accounts receivable (A/R),Account Receivables - Non-Retention,0," 2,112,020 ",Allowance for ECL,,1-000-02-2-001,Bad debt provision on accounts receivable
+91702,Sundry Debtors,Accounts receivable (A/R),Account Receivables - Non-Retention,0," 2,112,020 ",Trade receivables,,1-000-02-1-001,Accounts receivable
+91703,Allowance for ECL,Accounts receivable (A/R),Account Receivables - Non-Retention,0," 2,112,020 ",Allowance for ECL,,1-000-02-2-001,Bad debt provision on accounts receivable
+91900,Inventory Asset,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,1-000-04-4-001,In-transit inventory
+91901,Inventory Asset:RoIP Products,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,#N/A,#N/A
+91902,Inventory Asset:Bridge Products,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,#N/A,#N/A
+91903,Inventory Asset:900 Series Interfaces,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,#N/A,#N/A
+91904,Inventory Asset:960 Handsets & Consoles,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,#N/A,#N/A
+91907,Inventory Asset:DX-64 Digital Radio,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,1-000-04-3-001,Finished goods - Production
+91908,Inventory Asset:Misc Equipment,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,1-000-04-3-001,Finished goods - Production
+91909,Inventory Asset:RediTALK GUI Software Group,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,1-000-04-3-001,Finished goods - Production
+91910,Inventory Asset:Loan Inventory,Other Current Assets,Other Inventories,0," 2,113,050 ",Other Inventories,,#N/A,#N/A
+91911,Provision for Inventory Write Off,Other Current Assets,Finished Goods,0," 2,113,030 ",Allowance for inventory write-down,,1-000-04-5-003,Provision for write-down on finished goods
+91920,91920 Hardware - Omnitronics,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,1-000-04-3-001,Finished goods - Production
+91950,Inventory Asset:omnicore,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,1-000-04-3-001,Finished goods - Production
+91951,Inventory Asset:omnicore software,Other Current Assets,Finished Goods,0," 2,113,030 ",Finished Goods,,1-000-04-3-001,Finished goods - Production
+91999,Inventory Asset:Items out on loan,Other Current Assets,Other Inventories,0," 2,113,050 ",Other Inventories,,1-000-04-3-001,Finished goods - Production
+92100,EXCHANGE/REPAIR STOCK,Other Current Assets,Other Inventories,0," 2,113,050 ",Other Inventories,,1-000-04-4-001,In-transit inventory
+93000,Furniture and Equipment,Fixed Assets,Other PPE,0," 2,210,020 ","Furniture, Fixtures and Fittings",,1-000-51-4-001,"Furniture, fixture and fitting cost"
+93001,Leasehold Improvements,Fixed Assets,Other PPE,0," 2,210,020 ",Leasehold Improvements,,1-000-51-3-001,Leasehold improvement cost
+94000,Office Equipment,Fixed Assets,Other PPE,0," 2,210,020 ",Office equipment,,1-000-51-1-001,Office equipment cost
+94250,Accumulated Depreciation,Fixed Assets,Other PPE,0," 2,210,020 ",Office equipment,,1-000-51-1-002,Office equipment accum depreciation
+94500,Prepaid SMAs,Other Assets,Prepayments,0," 2,120,050 ",Prepayments,,1-000-06-2-998,Other prepayment
+94501,Lease Deposit,Other Assets,Deposits,0," 2,120,040 ",Security Deposit,,1-000-06-1-001,Security deposit
+95300,Accounts Payable,Accounts payable (A/P),Trade Payable (Excl Trade Financing),0," 2,440,000 ",Trade Payables,,2-000-01-1-001,Accounts payable
+99998,Uncategorized Asset,Other Current Assets,Other Inventories,0," 2,113,050 ",Other Inventories,,1-000-05-9-998,Other current assets
+99999,Inventory Asset:Demo Equipment,Other Current Assets,Other Inventories,0," 2,113,050 ",Other Inventories,,#N/A,#N/A
+,Accounts Payable (A/P) - AUD,Accounts payable (A/P),Trade Payable (Excl Trade Financing),#N/A," 2,440,000 ",Trade Payables,,#N/A,#N/A
+,Accounts Payable (A/P) - CAD,Accounts payable (A/P),Trade Payable (Excl Trade Financing),#N/A," 2,440,000 ",Trade Payables,,#N/A,#N/A
+,Accounts Payable (A/P) - EUR,Accounts payable (A/P),Trade Payable (Excl Trade Financing),#N/A," 2,440,000 ",Trade Payables,,#N/A,#N/A
+,NEW JERSEY DIVISION OF REVENUE Payable,Other Current Liabilities,Tax Payables,#N/A," 2,410,020 ",Tax Payables,,#N/A,#N/A
+,Wyoming Department of Revenue Payable,Other Current Liabilities,Tax Payables,#N/A," 2,410,020 ",Tax Payables,,#N/A,#N/A
+,Billable Expense Income,Income,Other Revenue,#N/A," 1,001,007 ",Other Revenue,,#N/A,#N/A
+,Sales of Product Income,Income,Other Revenue,#N/A," 1,001,007 ",Other Revenue,,#N/A,#N/A
+70000,Finance Charge Income,Income,Other Revenue,Revenue USA," 1,001,007 ",Other Revenue,,4-016-06-1-001,OM016 - Other revenue
+,Payroll Expenses,Expenses,Staff Cost,#N/A," 1,201,030 ",Wages and salaries,,#N/A,#N/A
+,Payroll Expenses:Commissions Paid,Expenses,Staff Cost,#N/A," 1,201,030 ",Wages and salaries,,#N/A,#N/A
+,Payroll Expenses:Wages,Expenses,Staff Cost,#N/A," 1,201,030 ",Wages and salaries,,#N/A,#N/A
+,Payroll Expenses:Wages:Paid Out Leave,Expenses,Staff Cost,#N/A," 1,201,030 ",Wages and salaries,,#N/A,#N/A
+,Payroll Related Expenses:Federal Payroll Taxes,Expenses,Staff Cost,#N/A," 1,201,030 ",Wages and salaries,,#N/A,#N/A
+,Payroll Related Expenses:Payroll Reimbursement  Clearing Acccount,Expenses,Staff Cost,#N/A," 1,201,030 ",Wages and salaries,,#N/A,#N/A
+80000,Exchange Gain or Loss-1,Other Expense,Trade Forex Gain/(Losses),#N/A," 1,300,110 ",Trade Forex Gain/(Losses),,#N/A,#N/A
+,Reconciliation Discrepancies-1,Other Expense,General Administrative,#N/A," 1,201,100 ",Other Expenses,,#N/A,#N/A
+,,,,#N/A,,,,#N/A,#N/A

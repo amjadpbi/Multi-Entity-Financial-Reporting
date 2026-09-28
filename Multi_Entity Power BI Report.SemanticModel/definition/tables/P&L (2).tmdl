@@ -1,0 +1,174 @@
+table 'P&L (2)'
+	isHidden
+	lineageTag: 395dfd94-3997-4af8-bd8e-091c08e084ca
+
+	column 'GL Account #'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4cb6a9e3-b7d5-4125-80e0-097b11544d92
+		summarizeBy: sum
+		sourceColumn: GL Account #
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Description'
+		dataType: string
+		isHidden
+		lineageTag: b43ef2b5-579c-4099-8300-ca407a0a175f
+		summarizeBy: none
+		sourceColumn: Account Description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		isHidden
+		lineageTag: 77bd1bd8-732d-449a-9a7d-d7dfdef93ab4
+		summarizeBy: none
+		sourceColumn: Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'P&L (EBITDA High Level)'
+		dataType: string
+		isHidden
+		lineageTag: d13891d7-dc44-40c0-84e7-4d67186b5bbd
+		summarizeBy: none
+		sourceColumn: P&L (EBITDA High Level)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual v Budget by entity '
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 564fa947-d8b2-4eec-af0a-63e3faef7b1f
+		summarizeBy: sum
+		sourceColumn: "Actual v Budget by entity "
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GP by product'
+		dataType: string
+		isHidden
+		lineageTag: 45262599-f831-494c-8a2e-ff9675067143
+		summarizeBy: none
+		sourceColumn: GP by product
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		isHidden
+		lineageTag: 9e71f98b-f334-402b-894e-c181440e3bab
+		summarizeBy: none
+		sourceColumn: Column7
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Consolidation (Trial Balance)'
+		dataType: string
+		isHidden
+		lineageTag: 689c0926-f4d7-4571-813f-b4c578465e84
+		summarizeBy: none
+		sourceColumn: Consolidation (Trial Balance)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annual budget  FY26 (Consolidated)'
+		dataType: string
+		isHidden
+		lineageTag: 13ee18da-9181-479e-adac-42951f1b2eb0
+		summarizeBy: none
+		sourceColumn: Annual budget  FY26 (Consolidated)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Eliminations
+		dataType: string
+		isHidden
+		lineageTag: b5234160-40a0-47ce-8703-e946e60e8f4d
+		summarizeBy: none
+		sourceColumn: Eliminations
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Eliminations Remarks'
+		dataType: string
+		isHidden
+		lineageTag: 07903a45-0f74-4897-901c-1a5da06bf731
+		summarizeBy: none
+		sourceColumn: Eliminations Remarks
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column '8. Cash Flow'
+		dataType: string
+		isHidden
+		lineageTag: 526a5cb0-3b04-4f1c-9e47-3d4797e5acfa
+		summarizeBy: none
+		sourceColumn: 8. Cash Flow
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type.1'
+		dataType: string
+		lineageTag: 108790b8-ad1c-4d77-84cf-9e98174981d1
+		summarizeBy: none
+		sourceColumn: Type.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: b3c14df6-dacf-40e4-84a9-aad6a7f53b57
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'P&L (2)' = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\hp\Downloads\UPDATED 10_25 - UT Australia Mapping.xlsx"), null, true),
+				    #"P&L_Sheet" = Source{[Item="P&L",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(#"P&L_Sheet", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"GL Account #", Int64.Type}, {"Account Description", type text}, {"Type", type text}, {"P&L (EBITDA High Level)", type text}, {"Actual v Budget by entity ", Int64.Type}, {"GP by product", type text}, {"Column7", type text}, {"Consolidation (Trial Balance)", type text}, {"Annual budget  FY26 (Consolidated)", type text}, {"Eliminations", type text}, {"Eliminations Remarks", type text}, {"8. Cash Flow", type text}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type", {{"Consolidation (Trial Balance)", null}, {"Annual budget  FY26 (Consolidated)", null}}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Errors", "Type.1", each "P&L"),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Country", each "AUS")
+				in
+				    #"Added Custom1"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,142 @@
+table P&L
+	isHidden
+	lineageTag: b30e61ec-f53f-4756-a376-d85303af5d78
+
+	column 'GL Account #'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d7bd8945-4218-4900-9fda-e39c7a3782a0
+		summarizeBy: sum
+		sourceColumn: GL Account #
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Account Description'
+		dataType: string
+		isHidden
+		lineageTag: caedbf0d-4ad7-4dab-a9b4-8c7b018ee368
+		summarizeBy: none
+		sourceColumn: Account Description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		isHidden
+		lineageTag: 2320e2f0-2947-485f-8add-80686d6f68b4
+		summarizeBy: none
+		sourceColumn: Type
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Omnitronics Inc P&L (EBITDA)'
+		dataType: string
+		isHidden
+		lineageTag: d6e68977-235d-4b5d-8d8e-9c00049e71c0
+		summarizeBy: none
+		sourceColumn: Omnitronics Inc P&L (EBITDA)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GP by product'
+		dataType: string
+		isHidden
+		lineageTag: 775b5120-bacd-4745-80e6-9bded6c65bc3
+		summarizeBy: none
+		sourceColumn: GP by product
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		isHidden
+		lineageTag: 9940c4df-487c-4537-8c6c-361c33a79850
+		summarizeBy: none
+		sourceColumn: Column6
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Consolidation (Trial Balance)'
+		dataType: string
+		isHidden
+		lineageTag: dde5b310-4c1e-4f1c-9c44-c5d86cfebf84
+		summarizeBy: none
+		sourceColumn: Consolidation (Trial Balance)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annual budget  FY26 (Consolidated)'
+		dataType: string
+		isHidden
+		lineageTag: 05f2e65d-fe26-4c68-9ece-1b6f7aa02396
+		summarizeBy: none
+		sourceColumn: Annual budget  FY26 (Consolidated)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column '8. Cash Flow'
+		dataType: string
+		isHidden
+		lineageTag: ca29fb28-c15a-4b7f-9fa8-b6157d75fcbe
+		summarizeBy: none
+		sourceColumn: 8. Cash Flow
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Type.1'
+		dataType: string
+		lineageTag: a73f2624-e613-4fc1-938a-77756db44ded
+		summarizeBy: none
+		sourceColumn: Type.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: ebc88d17-027e-4b99-b0ac-8dae4672f45f
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition P&L = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\hp\Downloads\UPDATED 10_25 - OMNI INC USA Mapping.xlsx"), null, true),
+				    #"P&L_Sheet" = Source{[Item="P&L",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(#"P&L_Sheet",{{"Column1", type any}, {"Column2", type text}, {"Column3", type text}, {"Column4", type any}, {"Column5", type any}, {"Column6", type text}, {"Column7", type any}, {"Column8", type any}, {"Column9", type any}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Column1", type any}, {"Column2", type text}, {"Column3", type text}, {"6", type text}, {"9", type text}, {"Column6", type text}, {"1", type text}, {"2", type text}, {"8", type text}}),
+				    #"Promoted Headers1" = Table.PromoteHeaders(#"Changed Type1", [PromoteAllScalars=true]),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Promoted Headers1",{{"GL Account #", Int64.Type}, {"Account Description", type text}, {"Type", type text}, {"Omnitronics Inc P&L (EBITDA)", type text}, {"GP by product", type text}, {"Column6", type text}, {"Consolidation (Trial Balance)", type text}, {"Annual budget  FY26 (Consolidated)", type text}, {"8. Cash Flow", type text}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type2", "Type.1", each "P&L"),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Country", each "USA")
+				in
+				    #"Added Custom1"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

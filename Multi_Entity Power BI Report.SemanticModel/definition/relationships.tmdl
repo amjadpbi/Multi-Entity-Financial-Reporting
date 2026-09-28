@@ -1,0 +1,39 @@
+relationship 51f1bce4-42b8-b9ff-fc3e-c85291b59d0f
+	fromColumn: 'UT & US Data 2025-26'.Month
+	toColumn: MONTH.MONTH
+
+relationship 0210c70c-ad53-46ab-913b-081cc685fbc3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'UT & US Data 2025-26'.Date
+	toColumn: LocalDateTable_160748ee-559c-46c7-922f-2f307503db54.Date
+
+relationship AutoDetected_a72c80fa-d1b0-4ad3-8784-1bb6aa988f5e
+	fromColumn: Map.'GL Account #'
+	toColumn: BS.'GL Account #'
+
+relationship de5281bf-bb8f-46a8-88c2-5b544dbfbcbd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'PnL BS & CFS Main'.Date
+	toColumn: LocalDateTable_fbf0dd74-66b1-4dcb-a7f3-728def3904b9.Date
+
+relationship a4a1e33f-ea65-4ce9-96af-3b0df909f987
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Budget FY26'.Date
+	toColumn: LocalDateTable_c13b81d9-e8e4-493b-ac78-39fd6532f73d.Date
+
+relationship 6be1677e-3e68-09b9-d363-de25f39cdb36
+	fromColumn: 'Consolidated TBalance'.MONTH
+	toColumn: MONTH.MONTH
+
+relationship caf0cf96-cad9-69ee-294f-edf2069fc761
+	fromColumn: 'PnL BS & CFS Main'.MONTH
+	toColumn: MONTH.MONTH
+
+relationship 0f1d8021-58c9-dc3b-0da7-15066e24410e
+	fromColumn: 'PnL Detailed'.MONTH
+	toColumn: MONTH.MONTH
+
+relationship f1331d8d-a36d-3a1d-c1f1-18412716f2c0
+	fromColumn: 'BS HL'.MONTH
+	toColumn: MONTH.MONTH
+

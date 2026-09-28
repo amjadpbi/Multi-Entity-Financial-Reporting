@@ -1,0 +1,633 @@
+table 'PnL BS & CFS Main'
+	lineageTag: 6a9d7fd1-d335-4079-8a30-aac70638c9a8
+
+	column Index
+		formatString: 0
+		lineageTag: a4983fca-0fc8-4377-9c31-4005b8a76b97
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [INDEX]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account
+		lineageTag: c12232bc-ebb8-4dff-8734-bb4671d77728
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Account]
+		sortByColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mapping
+		lineageTag: 94deec2e-e6aa-4385-89d9-c4357f544623
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mapping]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MONTH
+		lineageTag: e141e660-8c43-45b9-978b-28608cc53781
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: MONTH[MONTH]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Actual =
+			IF(ISBLANK(CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26',
+			'UT & US Data 2025-26'[Month] = 'PnL BS & CFS Main'[MONTH] &&
+			'UT & US Data 2025-26'[PnL] = 'PnL BS & CFS Main'[Mapping] &&
+			'UT & US Data 2025-26'[Year] = 2026
+			)
+			)),0,
+			CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26',
+			'UT & US Data 2025-26'[Month] = 'PnL BS & CFS Main'[MONTH] &&
+			'UT & US Data 2025-26'[PnL] = 'PnL BS & CFS Main'[Mapping] &&
+			'UT & US Data 2025-26'[Year] = 2026
+			)))
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 6045029c-90d9-4069-a2fe-815d822bb237
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual Final' = ```
+			
+			SWITCH(
+			    TRUE(),
+			
+			    'PnL BS & CFS Main'[INDEX] = 3,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 4,
+			        -[Actual],
+			
+			    'PnL BS & CFS Main'[INDEX] = 5,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 10,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 11,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 18,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {12, 13, 14, 15, 16, 17}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 20,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {12, 13, 14, 15, 16, 17}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 19
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[Actual]
+			)
+			
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 593a9ab2-3c2b-47a1-9f1e-8b75bd8db9a3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date = ```
+			
+			DATE(
+			    2026,
+			    SWITCH(
+			        TRUE(),
+			        'PnL BS & CFS Main'[MONTH] = "January", 1,
+			        'PnL BS & CFS Main'[MONTH] = "February", 2,
+			        'PnL BS & CFS Main'[MONTH] = "March", 3,
+			        'PnL BS & CFS Main'[MONTH] = "April", 4,
+			        'PnL BS & CFS Main'[MONTH] = "May", 5,
+			        'PnL BS & CFS Main'[MONTH] = "June", 6,
+			        'PnL BS & CFS Main'[MONTH] = "July", 7,
+			        'PnL BS & CFS Main'[MONTH] = "August", 8,
+			        'PnL BS & CFS Main'[MONTH] = "September", 9,
+			        'PnL BS & CFS Main'[MONTH] = "October", 10,
+			        'PnL BS & CFS Main'[MONTH] = "November", 11,
+			        'PnL BS & CFS Main'[MONTH] = "December", 12
+			    ),
+			    1
+			)
+			
+			```
+		formatString: Short Date
+		lineageTag: de3ee3e2-31e9-41bc-8151-4224ad243a4d
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: de5281bf-bb8f-46a8-88c2-5b544dbfbcbd
+			defaultHierarchy: LocalDateTable_fbf0dd74-66b1-4dcb-a7f3-728def3904b9.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Budget =
+			
+			CALCULATE(SUM('Budget FY26'[Amount]), FILTER('Budget FY26','Budget FY26'[Deck Mapping]='PnL BS & CFS Main'[Mapping]&& 'Budget FY26'[Month] = 'PnL BS & CFS Main'[MONTH]))
+		formatString: #,0.00
+		lineageTag: f565683b-766a-43ef-b549-13329ecf6c11
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget Actual' = ```
+			
+			SWITCH(
+			    TRUE(),
+			
+			    'PnL BS & CFS Main'[INDEX] = 3,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 4,
+			        -[Budget],
+			
+			    'PnL BS & CFS Main'[INDEX] = 5,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 10,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 11,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 18,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {12, 13, 14, 15, 16, 17}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 20,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {12, 13, 14, 15, 16, 17}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Budget]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 19
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[Budget]
+			)
+			
+			```
+		formatString: #,0.00
+		lineageTag: b9222185-0c2b-433f-a7da-478493cf44d0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual LY' =
+			IF(ISBLANK(CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26',
+			'UT & US Data 2025-26'[Month] = 'PnL BS & CFS Main'[MONTH] &&
+			'UT & US Data 2025-26'[PnL] = 'PnL BS & CFS Main'[Mapping] &&
+			'UT & US Data 2025-26'[Year] = 2025
+			)
+			)),0,
+			CALCULATE(SUM('UT & US Data 2025-26'[Amount]),
+			FILTER('UT & US Data 2025-26',
+			'UT & US Data 2025-26'[Month] = 'PnL BS & CFS Main'[MONTH] &&
+			'UT & US Data 2025-26'[PnL] = 'PnL BS & CFS Main'[Mapping] &&
+			'UT & US Data 2025-26'[Year] = 2025
+			)))
+		formatString: #,0.00
+		lineageTag: aadb7e70-9974-4e8f-ae4c-1e03db4cd1de
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actual Final LY' = ```
+			
+			SWITCH(
+			    TRUE(),
+			
+			    'PnL BS & CFS Main'[INDEX] = 3,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 4,
+			        -[Actual LY],
+			
+			    'PnL BS & CFS Main'[INDEX] = 5,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 10,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 11,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 18,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {12, 13, 14, 15, 16, 17}
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[INDEX] = 20,
+			        CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {1, 2}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 4
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {6, 7, 8, 9}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] IN {12, 13, 14, 15, 16, 17}
+			            )
+			        )
+			        - CALCULATE(
+			            SUM('PnL BS & CFS Main'[Actual LY]),
+			            FILTER(
+			                'PnL BS & CFS Main',
+			                'PnL BS & CFS Main'[MONTH] = EARLIER('PnL BS & CFS Main'[MONTH])
+			                    && 'PnL BS & CFS Main'[INDEX] = 19
+			            )
+			        ),
+			
+			    'PnL BS & CFS Main'[Actual LY]
+			)
+			
+			```
+		formatString: #,0.00
+		lineageTag: c08ff077-6110-4a81-ae99-0b0eaf22a280
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'PnL BS & CFS Main' = calculated
+		mode: import
+		source =
+				
+				CROSSJOIN(
+				DATATABLE(
+				    "Index",INTEGER,
+				    "Account",STRING,
+				    "Mapping",STRING,
+				    {
+				        {1,"Australia","Revenue Australia"},
+				        {2,"USA","Revenue USA"},
+				        {3,"Revenue","1+2"},
+				        {4,"COGS","COGS"},
+				        {5,"Gross Profit","3+4"},
+				        {6,"Staff costs","Staff Cost"},
+				        {7,"Advertising & Marketing","Advertising & Marketing"},
+				        {8,"Other opex","Other opex"},
+				        {9,"Cash Rent","6611"},
+				        {10,"Expenses","6+7+8+9"},
+				        {11,"EBITDA","5+10"},
+				        {12,"Cash Rent - Add back","RENT WA"},
+				        {13,"Trade Forex Gain/(Losses)","Trade Forex Gain/(Losses)"},
+				        {14,"Interest","Interest"},
+				        {15,"Other income (expense)","Others"},
+				        {16,"D&A","D&A"},
+				        {17,"Tax","Tax"},
+				        {18,"Profit After Tax","12,13,14,15,16,17"},
+				        {19,"Net (Loss) / Income","Net (Loss) / Income"},
+				        {20,"Checks","18-19"}
+				    }
+				),
+				DISTINCT('Month'[Month])
+				)
+
+	annotation PBI_Id = 20086eba838b4e92b658269505aaa839
+

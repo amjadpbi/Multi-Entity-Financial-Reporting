@@ -1,0 +1,141 @@
+table 'UT & US Data 2025-26'
+	lineageTag: b3048182-0078-4ff0-ad2e-d43839c5f35e
+
+	column 'GL Code'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b1c4a5e-7635-4f8b-813f-2b96e16db6d3
+		summarizeBy: count
+		sourceColumn: GL Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GL Account'
+		dataType: string
+		lineageTag: a55300c4-f727-4125-9b53-5b21ea4bd261
+		summarizeBy: none
+		sourceColumn: GL Account
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 70a971d7-6b9e-46f0-913b-62a1462da23a
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: c77e909f-51b7-4d05-813a-59d130038b0c
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b6140fd-1044-4351-94d7-9e4628f636e2
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ae1fece5-118c-4623-a055-a8768a11626d
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 736e260c-87dc-4287-8398-373c65360a25
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date = ```
+			
+			DATE('UT & US Data 2025-26'[Year],
+			SWITCH(
+			    TRUE(),
+			    'UT & US Data 2025-26'[Month] = "January", 1,
+			    'UT & US Data 2025-26'[Month] = "February", 2, 
+			    'UT & US Data 2025-26'[Month] = "March", 3,
+			    'UT & US Data 2025-26'[Month] = "April", 4,
+			    'UT & US Data 2025-26'[Month] = "May",5, 
+			    'UT & US Data 2025-26'[Month] = "June", 6,
+			     'UT & US Data 2025-26'[Month] = "July", 7,
+			     'UT & US Data 2025-26'[Month] = "August",8,
+			     'UT & US Data 2025-26'[Month] = "September", 9, 
+			     'UT & US Data 2025-26'[Month] = "October", 10,
+			     'UT & US Data 2025-26'[Month] = "November", 11,
+			     'UT & US Data 2025-26'[Month] = "December", 12
+			),
+			1)
+			```
+		formatString: General Date
+		lineageTag: 3311ab44-2e1f-4a9c-bf22-223ac7eb5132
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 0210c70c-ad53-46ab-913b-081cc685fbc3
+			defaultHierarchy: LocalDateTable_160748ee-559c-46c7-922f-2f307503db54.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'BS HL' =
+			
+			LOOKUPVALUE(Map[7. Balance Sheet (High Level)],Map[GL Account #],'UT & US Data 2025-26'[GL Code],Map[Country],'UT & US Data 2025-26'[Country],Map[Type.1],'UT & US Data 2025-26'[Type])
+		lineageTag: 7cd6b25e-6de6-444d-a30a-591dd014f33c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cash Flow' = LOOKUPVALUE(Map[8. Cash Flow],Map[GL Account #],'UT & US Data 2025-26'[GL Code],Map[Country],'UT & US Data 2025-26'[Country],Map[Type.1],'UT & US Data 2025-26'[Type])
+		lineageTag: 96cd514a-a9df-4f81-bc69-90cad7a2f78a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'GP Product' = LOOKUPVALUE(Map[GP by product],Map[GL Account #],'UT & US Data 2025-26'[GL Code],Map[Country],'UT & US Data 2025-26'[Country],Map[Type.1],'UT & US Data 2025-26'[Type])
+		lineageTag: 16a15f77-e7a4-4cb9-96c6-07e02fe3b3ee
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column PnL = ```
+			
+			IF (
+			    'UT & US Data 2025-26'[Country] = "USA",
+			    LOOKUPVALUE(Map[Omnitronics Inc P&L (EBITDA)], Map[GL Account #], 'UT & US Data 2025-26'[GL Code], Map[Country], 'UT & US Data 2025-26'[Country]),
+			    LOOKUPVALUE(Map[P&L (EBITDA High Level)], Map[GL Account #], 'UT & US Data 2025-26'[GL Code], Map[Country], 'UT & US Data 2025-26'[Country])
+			)
+			
+			```
+		lineageTag: 43b9d8d1-128a-4f78-973a-67493b4698f2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'UT & US Data 2025-26' = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({#"UT P&L 2026 a", #"UT P&L 2025", #"UT Balance Sheet FY 2026", #"UT Balance Sheet FY 2025", #"US P&L FY 2026 a", #"US P&L FY 2025", #"US Balance Sheet FY 2026", #"US Balance Sheet FY 2025"}),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Amount", Currency.Type}, {"Year", Int64.Type}, {"GL Code", Int64.Type}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","PROFIT & LOSS","P&L",Replacer.ReplaceText,{"Type"})
+				in
+				    #"Replaced Value"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

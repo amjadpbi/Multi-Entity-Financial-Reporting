@@ -1,0 +1,113 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "bf23aba910de0432b202",
+  "position": {
+    "x": 270.10192525481312,
+    "y": 98.571428571428584,
+    "z": 6000,
+    "height": 1401.4285714285713,
+    "width": 1229.8980747451869,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Consolidated TBalance"
+                    }
+                  },
+                  "Property": "Country"
+                }
+              },
+              "queryRef": "Consolidated TBalance.Country",
+              "nativeQueryRef": "Country",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Consolidated TBalance"
+                    }
+                  },
+                  "Property": "Consolidation (Trial Balance)"
+                }
+              },
+              "queryRef": "Consolidated TBalance.Consolidation (Trial Balance)",
+              "nativeQueryRef": "Consolidation (Trial Balance)",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Consolidated TBalance"
+                        }
+                      },
+                      "Property": "GL Account #"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Consolidated TBalance.GL Account #)",
+              "nativeQueryRef": "Sum of GL Account #"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Consolidated TBalance"
+                  }
+                },
+                "Property": "Consolidation (Trial Balance)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
