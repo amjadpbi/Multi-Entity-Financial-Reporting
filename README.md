@@ -32,28 +32,26 @@ The project uses simulated practice data representing two entities:
 - United States
 - Australia
 
+The original source files are provided in the repository as a ZIP archive.
+
 The data is intended for demonstration and does not represent a production financial system.
-
-## Tools
-
-- Power BI
-- Power Query
-- DAX
-- Excel / CSV
 
 ## Repository Structure
 
 ```text
-data/
-└── source/          # Source financial and mapping files
-
-docs/
-└── ...              # Supporting project documentation
-
-screenshots/
-└── ...              # Report screenshots / visual evidence
-
-Multi_Entity Power BI Report.pbix
+Multi-Entity-Financial-Reporting/
+│
+├── CSV.zip
+│   └── Original source CSV files
+│
+├── Multi_Entity Power BI Report.pbix
+│   └── Power BI report
+│
+├── Financial Analysis and Dashboard.pdf
+│   └── Report / dashboard documentation
+│
+└── README.md
+    └── Project documentation
 ```
 
 ## What This Project Demonstrates
@@ -67,7 +65,7 @@ Multi_Entity Power BI Report.pbix
 
 ## Evidence
 
-Report screenshots and supporting documentation are available in the `screenshots/` and `docs/` folders.
+The repository includes the Power BI report, original source-data archive, and PDF report documentation.
 
 ---
 
