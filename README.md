@@ -1,19 +1,76 @@
-Financial consolidation for a dual-entity technology company, cutting reporting time from days to hours while improving accuracy and enabling real-time budget analysis.
+# Multi-Entity Financial Reporting
 
-🔧 Built:
-✓ End-to-end ETL pipeline consolidating US & Australian entity data
-✓ Power BI data model with advanced DAX and time intelligence
-✓ Automated data quality framework (nulls, errors, standardization)
+A Power BI financial reporting model for consolidating and analyzing financial data across US and Australian entities.
 
-📈 Delivered:
-✓ 8 interactive dashboards: P&L, Balance Sheet, Cash Flow, Budget vs Actual, GP Analysis, Trial Balance
-✓ Drill-down capability from executive summary to transaction-level detail
-✓ Real-time variance analysis with visual KPI indicators
+## Project Overview
 
-💡 Technical Skills:
-✓ Power Query (merge, append, transformations) • DAX (CROSSJOIN, LOOKUPVALUE, time intelligence)
-✓ Financial modeling • Multi-entity consolidation • KPI development 
+This practice project demonstrates how multi-entity financial data can be prepared, standardized, modeled, and analyzed in Power BI.
 
-🎯 Impact: Improved data accuracy through automated quality controls, enabled real-time decision-making with instant access to financial insights, and transformed reporting from a multi-day manual process to an interactive, self-service analytics platform.
+The report covers core financial reporting and management-analysis scenarios, including:
 
-Note: Practice project built with simulated data to demonstrate real-world financial reporting capabilities.
+- Profit & Loss
+- Balance Sheet
+- Cash Flow
+- Budget vs Actual
+- Gross Profit analysis
+- Trial Balance
+- Financial KPIs and variance analysis
+
+## What I Built
+
+- Consolidated financial data from multiple entity sources
+- Standardized and transformed source data using Power Query
+- Built a Power BI financial data model
+- Developed DAX measures for financial analysis and time-based reporting
+- Added interactive drill-down and analytical views
+- Structured reporting for comparison across entities and periods
+
+## Data
+
+The project uses simulated practice data representing two entities:
+
+- United States
+- Australia
+
+The data is intended for demonstration and does not represent a production financial system.
+
+## Tools
+
+- Power BI
+- Power Query
+- DAX
+- Excel / CSV
+
+## Repository Structure
+
+```text
+data/
+└── source/          # Source financial and mapping files
+
+docs/
+└── ...              # Supporting project documentation
+
+screenshots/
+└── ...              # Report screenshots / visual evidence
+
+Multi_Entity Power BI Report.pbix
+```
+
+## What This Project Demonstrates
+
+- Multi-entity financial reporting
+- Financial data transformation
+- Power BI semantic modeling
+- DAX-based financial calculations
+- Variance and KPI analysis
+- Interactive financial reporting
+
+## Evidence
+
+Report screenshots and supporting documentation are available in the `screenshots/` and `docs/` folders.
+
+---
+
+**Project type:** Self-Initiated · Financial Analytics  
+**Data:** Simulated / Practice  
+**Primary tool:** Power BI
